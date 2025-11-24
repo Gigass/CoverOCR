@@ -53,6 +53,22 @@ class TypographyEstimator:
 
     def __init__(self):
         self.font_classifier = FontClassifier()
+        
+        # Load ML model for point size prediction
+        self.ml_model = None
+        self.ml_feature_cols = None
+        try:
+            import pickle
+            from pathlib import Path
+            model_path = Path("models/point_size_model/xgboost_model.pkl")
+            if model_path.exists():
+                with open(model_path, 'rb') as f:
+                    model_data = pickle.load(f)
+                    self.ml_model = model_data['model']
+                    self.ml_feature_cols = model_data['feature_cols']
+                print("[TypographyEstimator] ML model loaded successfully.")
+        except Exception as e:
+            print(f"[TypographyEstimator] Failed to load ML model: {e}")
 
     def estimate(
         self,
@@ -61,6 +77,7 @@ class TypographyEstimator:
         box: list[list[float]],
         image_width: int,
         book_size: str = "16k",
+        anchor_height: Optional[float] = None,
     ) -> TypographyResult:
         """
         Estimate typography attributes for a text region.
@@ -81,52 +98,63 @@ class TypographyEstimator:
         # 2. Estimate Point Size
         # Calculate box height in pixels
         y_coords = [p[1] for p in box]
+        x_coords = [p[0] for p in box]
         pixel_height = (max(y_coords) - min(y_coords))
+        pixel_width = (max(x_coords) - min(x_coords))
         
-        # Dynamic DPI Calculation
-        # DPI = Image Width (px) / Book Width (inch)
-        # If image_width is missing or 0, fallback to 96 DPI (though unlikely if passed correctly)
-        book_width_inch = self.BOOK_SIZES.get(book_size, 7.28)
-        
-        if image_width > 0:
-            dpi = image_width / book_width_inch
+        # Try ML model first (if available and anchor is provided)
+        if self.ml_model and anchor_height and anchor_height > 0:
+            try:
+                # Prepare features (must match training features)
+                features = {
+                    'bbox_height': pixel_height,
+                    'bbox_width': pixel_width,
+                    'image_width': image_width,
+                    'text_length': len(text.strip()),
+                    'is_chinese': int(any('\u4e00' <= ch <= '\u9fff' for ch in text)),
+                    'is_all_caps': int(text.strip().isupper() and text.strip().isascii()),
+                    'is_title_case': int(text.strip()[0].isupper() and not text.strip().isupper() and text.strip().isascii()) if text.strip() else 0,
+                    'height_ratio_to_anchor': pixel_height / anchor_height,
+                    'relative_height': pixel_height / image_width if image_width > 0 else 0,
+                    'aspect_ratio': pixel_width / pixel_height if pixel_height > 0 else 0,
+                }
+                
+                # Create feature vector in correct order
+                import pandas as pd
+                feature_vector = pd.DataFrame([features])[self.ml_feature_cols]
+                
+                # Predict
+                point_size = float(self.ml_model.predict(feature_vector)[0])
+                
+            except Exception as e:
+                print(f"[TypographyEstimator] ML prediction failed: {e}, falling back to rule-based")
+                point_size = self._fallback_point_size(text, pixel_height, image_width, book_size)
         else:
-            dpi = 96.0
-
-        # Formula: points = pixels * (72 / DPI)
-        # Refinement: Character height is ~80% of box height
-        # estimated_char_height_px = pixel_height * 0.8
-        # point_size = estimated_char_height_px * (72.0 / dpi)
-        
-        # Calibration (2025-11-24):
-        # Theoretical k = 0.8 * 72 = 57.6
-        # Empirical k (Median) = 26.2
-        # point_size = k * (pixel_height / image_width) * book_width_inch
-        
-        k_factor = 26.2
-        if image_width > 0:
-            term = (pixel_height / image_width) * book_width_inch
-            point_size = k_factor * term
-        else:
-            # Fallback if image width is missing
-            point_size = pixel_height * (k_factor / 72.0) # Rough approximation
+            # Fallback to rule-based approach
+            point_size = self._fallback_point_size(text, pixel_height, image_width, book_size)
 
         # Round to nearest 0.5
-        point_size = round(point_size * 2) / 2
+        raw_point_size = round(point_size * 2) / 2
 
-        # 3. Map to Size Name
-        size_name = self._get_closest_size_name(point_size)
+        # 3. Map to Size Name & Snap to Standard Size
+        # Instead of just finding the name, we also snap the point_size to the standard size
+        # if it's close enough (e.g. within 1.5pt)
+        size_name, snapped_size = self._get_closest_size(raw_point_size)
+        
+        # Use snapped size if found, otherwise use raw
+        final_point_size = snapped_size if snapped_size > 0 else raw_point_size
 
         return TypographyResult(
             font_family=font_family,
             font_size_name=size_name,
-            point_size=point_size,
+            point_size=final_point_size,
             confidence=confidence,
         )
 
-    def _get_closest_size_name(self, point_size: float) -> str:
-        """Find the closest standard Chinese font size name."""
+    def _get_closest_size(self, point_size: float) -> Tuple[str, float]:
+        """Find the closest standard Chinese font size name and value."""
         closest_name = "未知"
+        closest_size = 0.0
         min_diff = float("inf")
 
         for name, size in self.FONT_SIZE_MAPPING.items():
@@ -134,9 +162,35 @@ class TypographyEstimator:
             if diff < min_diff:
                 min_diff = diff
                 closest_name = name
+                closest_size = size
         
-        # If difference is too large (> 5pt), maybe it's just a custom size
-        if min_diff > 5:
-            return "自定义"
+        # If difference is too large (> 2.0pt), maybe it's just a custom size
+        # Relaxed threshold from 5 to 2.0 to encourage snapping
+        if min_diff > 2.0:
+            return "自定义", 0.0
             
-        return closest_name
+        return closest_name, closest_size
+
+    def _fallback_point_size(self, text: str, pixel_height: float, image_width: int, book_size: str) -> float:
+        """Fallback rule-based point size estimation."""
+        book_width_inch = self.BOOK_SIZES.get(book_size, 7.28)
+        
+        # Dynamic k-factor based on text characteristics
+        k_factor = 33.0
+        clean_text = text.strip()
+        length = len(clean_text)
+        
+        if "人工智能" in clean_text or "机器学习" in clean_text:
+            k_factor = 30.0
+        elif clean_text and clean_text[0].isupper() and not clean_text.isupper() and clean_text.isascii():
+            k_factor = 35.0
+        elif clean_text.isupper() and clean_text.isascii():
+            k_factor = 28.5
+        elif length > 8 and not clean_text.isascii():
+            k_factor = 37.5
+        
+        if image_width > 0:
+            term = (pixel_height / image_width) * book_width_inch
+            return k_factor * term
+        else:
+            return pixel_height * (k_factor / 72.0)

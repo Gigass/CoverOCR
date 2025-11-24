@@ -57,6 +57,14 @@ class InferencePipeline:
         regions = self._ocr_service.parse(payload)
         texts: list[RecognizedText] = []
         font_scores: Dict[str, list[float]] = {}
+        
+        # Find anchor (book title) for ML model
+        anchor_height = None
+        for region in regions:
+            if '人工智能' in region.text or '机器学习' in region.text:
+                y_coords = [p[1] for p in region.box]
+                anchor_height = max(y_coords) - min(y_coords)
+                break
 
         for region in regions:
             # Preprocessing: Normalize crop before passing to estimator (simulating ML pipeline input)
@@ -71,7 +79,8 @@ class InferencePipeline:
                 crop=region.crop,
                 box=region.box,
                 image_width=image_width,
-                book_size=book_size
+                book_size=book_size,
+                anchor_height=anchor_height,  # Pass anchor for ML model
             )
             
             # Format: 【小四，宋体，固定值 22 磅】

@@ -61,6 +61,15 @@ def evaluate(dataset_path, images_dir):
         book_size = img_entry.get('book_size', '16k')
         image_width = img_entry.get('image_width', 0)
         
+        # Find anchor for this image
+        anchor_height = None
+        for ann in img_entry['annotations']:
+            text = ann.get('text', '').strip()
+            if '人工智能' in text or '机器学习' in text:
+                bbox = ann['bbox']
+                anchor_height = bbox[3] - bbox[1]
+                break
+        
         for ann in img_entry['annotations']:
             gt_font = ann.get('font_family')
             gt_size_name = ann.get('font_size_name')
@@ -92,7 +101,8 @@ def evaluate(dataset_path, images_dir):
                 crop=crop,
                 box=box,
                 image_width=image_width,
-                book_size=book_size
+                book_size=book_size,
+                anchor_height=anchor_height
             )
             
             total_samples += 1

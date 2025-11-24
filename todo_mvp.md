@@ -7,10 +7,12 @@
 2. 准备 `start_local.sh`，支持一键启动 FastAPI + Vite。
 3. 配置 `.env`（如 `VITE_API_BASE_URL`、允许 CORS 的源等）；可选地准备 `infra/.env` 以便未来扩展 MinIO/PG。
 
-## 2. 数据与模型 (Data & ML)
-1. **数据预处理模块**：实现缺失值处理、异常值清洗、归一化、独热编码逻辑。
-2. **OCR 模型**：部署 PaddleOCR 用于文字内容提取。
-3. **排版属性模型**：寻找或训练/微调一个模型，能够输出字体、字号及磅值（或编写启发式算法+回归模型作为替代方案）。
+## 2. 数据与模型 (Data & ML) ✅
+1. ✅ **数据预处理模块**：已实现特征工程（锚点归一化、文本特征、几何特征）。
+2. ✅ **OCR 模型**：已部署 PaddleOCR 用于文字内容提取。
+3. ✅ **字体分类模型**：已训练 ResNet18，准确率 86.26%。
+4. ✅ **字号回归模型**：已训练 RandomForest，MAE 0.03pt，准确率 98.08%。
+5. ✅ **模型集成**：已集成到 `TypographyEstimator` 和 `InferencePipeline`。
 
 ## 3. 后端 FastAPI
 1. `POST /api/v1/upload`：接收图片，返回 `request_id`；可先存内存，后续再接入 MinIO。
