@@ -7,3 +7,25 @@ frontend/dist/
 infra/.env
 .idea/
 .vscode/
+
+# Debug files
+debug_*.log
+debug_*.py
+*.log
+
+# Temporary directories
+data/debug_*/
+data/font_train/
+
+# Model checkpoints (optional, keep final models only)
+models/*/checkpoints/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
