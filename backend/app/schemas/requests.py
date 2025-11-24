@@ -10,6 +10,9 @@ class UploadResponse(BaseModel):
 class RecognizedText(BaseModel):
     content: str
     font: Optional[str] = None
+    font_size_name: Optional[str] = None
+    point_size: Optional[float] = None
+    formatted_typography: Optional[str] = None
     confidence: float = 0.0
     font_confidence: Optional[float] = None
 

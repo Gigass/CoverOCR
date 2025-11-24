@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, HTTPException, UploadFile, Form
 from fastapi.responses import JSONResponse
 
 from ...schemas.requests import UploadResponse, ResultResponse
@@ -11,12 +11,13 @@ router = APIRouter()
 @router.post("/upload", response_model=UploadResponse)
 async def upload_image(
     file: UploadFile,
+    book_size: str = Form("16k"),
     pipeline: InferencePipeline = Depends(get_pipeline),
 ) -> UploadResponse:
     if file.content_type not in ("image/jpeg", "image/png"):
         raise HTTPException(status_code=400, detail="Unsupported file type")
 
-    request_id = await pipeline.enqueue(file)
+    request_id = await pipeline.enqueue(file, book_size)
     return UploadResponse(request_id=request_id)
 
 

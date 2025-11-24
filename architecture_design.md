@@ -1,9 +1,9 @@
-# CoverOCR 技术栈与架构设计（V1.1）
+# CoverOCR 技术栈与架构设计（V2.0）
 
 ## 1. 文档目的
-- 基于“可复用公开模型，快速跑通文字+字体识别”的目标，给出最小实现方案；
-- 聚焦实拍书本封面的 **文字检测识别** 与 **字体识别**，不再做封面分类，仅需返回文字内容及字体类型即可完成演示；
-- 说明后续若扩展到自研模型、封面识别或数据闭环时的可演进路径。
+- 基于“机器学习端到端识别”的目标，构建书本封面文字及排版属性识别系统；
+- 聚焦实拍书本封面的 **文字检测识别** 与 **详细排版属性识别**（字体类别、字号名称、磅值）；
+- 明确 **数据预处理** 的标准流程（缺失值、异常值、归一化、独热编码），作为核心技术考核点。
 
 ## 2. 技术栈设计
 
@@ -20,11 +20,10 @@
 ### 2.2 模型与库
 | 模块 | 建议模型/库 | 补充说明 |
 |------|-------------|----------|
-| 文字检测 | **PaddleOCR PP-OCRv4 Detection** | 直接复用官方中文通用模型，适配实拍场景，无需额外训练。 |
-| 文字识别 | **PaddleOCR PP-OCRv4 Recognition** | 支持中英文混排，内含语言模型纠错；部署即可达到 ≥80% 识别率。 |
-| 字体识别 | **PaddleClas Font Recognition / ResNet18 预训练模型** | 直接复用公开字体模型，涵盖宋体、黑体、仿宋、楷体、Arial、Times 等常见字体。 |
-| OCR Pipeline | **PaddleOCR Python API / paddleocr==2.x** | 提供一键式检测+识别组合，并能输出文字框、文字内容与置信度。 |
-| 字体推理辅助 | **PaddleClas inference** | 将 OCR 裁剪图像输入字体分类模型，无需重新训练即可输出字体标签。 |
+| 文字检测 | **PaddleOCR PP-OCRv4 Detection** | 复用官方模型，适配实拍场景。 |
+| 文字识别 | **PaddleOCR PP-OCRv4 Recognition** | 支持中英文混排。 |
+| **排版属性识别** | **Custom Multi-task Network / Regression Model** | **核心变更**：需构建或微调模型以输出：<br>1. **字体分类**（宋/黑/楷等）<br>2. **字号分类**（小四/一号等）<br>3. **磅值回归**（Point Size Regression）。 |
+| **数据预处理** | **Scikit-learn / Pandas / NumPy** | **必须实现**：<br>1. **缺失值/异常值处理**<br>2. **归一化 (Normalization)**<br>3. **独热编码 (One-Hot)** |
 
 ### 2.3 数据与存储
 | 功能 | 技术 | 说明 |
@@ -64,13 +63,12 @@ React GUI (Vite) ──> FastAPI 网关 ──> 推理编排器
 ### 3.2 模块划分
 | 模块 | 功能 | 输入/输出 |
 |------|------|-----------|
-| Upload Handler | 接收上传图像，进行尺寸/类型校验，写入对象存储（可选） | 输入：JPG/PNG；输出：存储路径或内存字节流 |
-| Preprocessor | 图像重采样、去噪、颜色校正、矩形校正 | 输入：原图；输出：标准化图像 |
-| Text Detector | 产出文字区域多边形 | 输入：标准化图像 | 输出：`List[Polygon]` |
+| Upload Handler | 接收上传图像，校验格式 | 输入：JPG/PNG；输出：图像流 |
+| **ML Preprocessor** | **核心模块**：<br>1. 图像归一化<br>2. 标注数据清洗（缺失/异常处理）<br>3. 特征编码（One-Hot） | 输入：原始数据/图像；输出：模型可用张量 |
+| Text Detector | 产出文字区域多边形 | 输入：预处理图像 | 输出：`List[Polygon]` |
 | Text Recognizer | 逐区域识别文字内容 | 输入：裁剪文字块 | 输出：`List[str]` |
-| Font Classifier | 对文字块预测字体类型 | 输入：裁剪文字块 | 输出：`List[font_label]` |
-| Result Aggregator | 将文字内容、字体标签映射为 API 响应 | 输入：各模块输出 | 输出：JSON 结构 |
-| Admin Console（可选） | 标注审核、模型状态监控 | 输入：用户操作 | 输出：管理报告 |
+| **Typography Estimator** | **排版属性预测**：<br>同时预测字体类别、字号名称、磅值 | 输入：裁剪文字块 | 输出：`{font, size_name, point_size}` |
+| Result Aggregator | 融合文字与属性，格式化输出 | 输入：各模块输出 | 输出：`【小四，宋体，固定值 22 磅】` 格式JSON |
 
 ### 3.3 关键流程（推理路径）
 1. **上传阶段**：前端使用 AntD `Upload` 组件；文件通过 FastAPI `POST /api/v1/upload` 上传。限制 20MB，自动生成请求 ID。

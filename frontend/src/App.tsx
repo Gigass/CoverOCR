@@ -4,6 +4,7 @@ import {
   Empty,
   Layout,
   List,
+  Select,
   Space,
   Statistic,
   Tabs,
@@ -83,6 +84,8 @@ function App() {
 
   useEffect(() => () => clearPolling(), [])
 
+  const [bookSize, setBookSize] = useState<string>('16k')
+
   const handleUpload = async (options: UploadRequestOption) => {
     const file = options.file as File
     setStatus('uploading')
@@ -90,6 +93,7 @@ function App() {
     setResult(null)
     const formData = new FormData()
     formData.append('file', file)
+    formData.append('book_size', bookSize)
 
     try {
       const { data } = await apiClient.post('/api/v1/upload', formData, {
@@ -133,8 +137,12 @@ function App() {
           <List.Item>
             <Space direction="vertical">
               <Text>{item.content}</Text>
-              <Space>
-                {item.font && <Tag color="blue">{item.font}</Tag>}
+              <Space wrap>
+                {item.formatted_typography ? (
+                  <Tag color="purple">{item.formatted_typography}</Tag>
+                ) : (
+                  item.font && <Tag color="blue">{item.font}</Tag>
+                )}
                 <Text type="secondary">
                   置信度 {(item.confidence * 100).toFixed(1)}%
                 </Text>
@@ -183,6 +191,19 @@ function App() {
       <Content className="content">
         <div className="grid">
           <Card title="上传封面" bordered={false}>
+            <div style={{ marginBottom: 16 }}>
+              <Text strong>选择书本尺寸：</Text>
+              <Select
+                value={bookSize}
+                onChange={setBookSize}
+                style={{ width: 200, marginLeft: 8 }}
+                options={[
+                  { value: '16k', label: '16开 (教材/参考书)' },
+                  { value: 'a4', label: 'A4 (打印纸/大开本)' },
+                  { value: '32k', label: '32开 (小册子/小说)' },
+                ]}
+              />
+            </div>
             <Upload.Dragger {...uploadProps} disabled={status === 'uploading'}>
               <p className="upload-icon">
                 <InboxOutlined />

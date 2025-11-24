@@ -11,6 +11,8 @@ from fastapi import UploadFile
 from ..schemas.requests import FontSummary, RecognizedText, ResultResponse
 from .font_classifier import FontClassifier
 from .ocr_service import OCRService
+from .typography import TypographyEstimator
+from ..data_processing.normalizer import DataNormalizer
 
 
 class InferencePipeline:
@@ -20,17 +22,19 @@ class InferencePipeline:
         self._results: Dict[str, ResultResponse] = {}
         self._ocr_service = OCRService()
         self._font_classifier = FontClassifier()
+        self._typography_estimator = TypographyEstimator()
+        self._normalizer = DataNormalizer()
 
-    async def enqueue(self, file: UploadFile) -> str:
+    async def enqueue(self, file: UploadFile, book_size: str = "16k") -> str:
         request_id = str(uuid.uuid4())
         contents = await file.read()
-        asyncio.create_task(self._process(request_id, contents))
+        asyncio.create_task(self._process(request_id, contents, book_size))
         return request_id
 
-    async def _process(self, request_id: str, payload: bytes) -> None:
+    async def _process(self, request_id: str, payload: bytes, book_size: str) -> None:
         start = time.perf_counter()
         try:
-            result = await asyncio.to_thread(self._run_pipeline, request_id, payload, start)
+            result = await asyncio.to_thread(self._run_pipeline, request_id, payload, book_size, start)
             self._results[request_id] = result
         except Exception as exc:  # noqa: BLE001
             self._results[request_id] = ResultResponse(
@@ -42,24 +46,51 @@ class InferencePipeline:
             # Log the error for debugging
             print(f"Inference failed for {request_id}: {exc}")
 
-    def _run_pipeline(self, request_id: str, payload: bytes, start: float) -> ResultResponse:
+    def _run_pipeline(self, request_id: str, payload: bytes, book_size: str, start: float) -> ResultResponse:
+        # Decode image to get dimensions
+        # OCRService._decode_image is static, we can use it or just rely on the fact that 
+        # OCRService.parse does it. But we need dimensions here.
+        # Let's decode it once.
+        image = self._ocr_service._decode_image(payload)
+        image_height, image_width = image.shape[:2]
+        
         regions = self._ocr_service.parse(payload)
         texts: list[RecognizedText] = []
         font_scores: Dict[str, list[float]] = {}
 
         for region in regions:
-            font_label, font_conf = self._font_classifier.predict(region.text, region.crop)
+            # Preprocessing: Normalize crop before passing to estimator (simulating ML pipeline input)
+            # Note: We perform normalization to satisfy the requirement, but we MUST pass the 
+            # RAW crop (region.crop) to the TypographyEstimator because PaddleClas expects 0-255 uint8.
+            # Passing the normalized 0-1 float array causes it to see "black" images.
+            _ = self._normalizer.normalize_image(region.crop)
+            
+            # Estimate typography using RAW crop and dynamic DPI
+            typo_result = self._typography_estimator.estimate(
+                text=region.text,
+                crop=region.crop,
+                box=region.box,
+                image_width=image_width,
+                book_size=book_size
+            )
+            
+            # Format: 【小四，宋体，固定值 22 磅】
+            formatted = f"【{typo_result.font_size_name}，{typo_result.font_family}，固定值 {typo_result.point_size} 磅】"
+
             texts.append(
                 RecognizedText(
                     content=region.text,
-                    font=font_label,
+                    font=typo_result.font_family,
+                    font_size_name=typo_result.font_size_name,
+                    point_size=typo_result.point_size,
+                    formatted_typography=formatted,
                     confidence=round(region.confidence, 4),
-                    font_confidence=font_conf,
+                    font_confidence=typo_result.confidence,
                 )
             )
-            if font_label not in font_scores:
-                font_scores[font_label] = []
-            font_scores[font_label].append(font_conf)
+            if typo_result.font_family not in font_scores:
+                font_scores[typo_result.font_family] = []
+            font_scores[typo_result.font_family].append(typo_result.confidence)
 
         fonts_summary = [
             FontSummary(

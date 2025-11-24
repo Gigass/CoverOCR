@@ -1,4 +1,4 @@
-# CoverOCR MVP Todo List
+# CoverOCR Todo List (V2.0)
 
 > 目标：复用公开 OCR/字体模型，跑通“上传 → 文字识别 → 字体输出”链路，满足演示需求。
 
@@ -7,10 +7,10 @@
 2. 准备 `start_local.sh`，支持一键启动 FastAPI + Vite。
 3. 配置 `.env`（如 `VITE_API_BASE_URL`、允许 CORS 的源等）；可选地准备 `infra/.env` 以便未来扩展 MinIO/PG。
 
-## 2. 数据与模型（MVP）
-1. 不再采集封面分类数据，直接复用 PaddleOCR 官方中文检测+识别模型，下载至 `models/weights/paddleocr`.
-2. 复用 PaddleClas 字体识别模型（或其他公开字体模型），覆盖宋体/黑体/仿宋/楷体/Arial/Times 等常见字体。
-3. 编写 `scripts/download_models.sh` 或 README 说明，记录模型权重下载方式与存放路径。
+## 2. 数据与模型 (Data & ML)
+1. **数据预处理模块**：实现缺失值处理、异常值清洗、归一化、独热编码逻辑。
+2. **OCR 模型**：部署 PaddleOCR 用于文字内容提取。
+3. **排版属性模型**：寻找或训练/微调一个模型，能够输出字体、字号及磅值（或编写启发式算法+回归模型作为替代方案）。
 
 ## 3. 后端 FastAPI
 1. `POST /api/v1/upload`：接收图片，返回 `request_id`；可先存内存，后续再接入 MinIO。

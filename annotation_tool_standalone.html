@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoverOCR 独立标注工具 v2.0 Enhanced</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f8f9fa;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .header {
+            background: white;
+            color: #1a1a1a;
+            padding: 32px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .header p {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 0;
+            min-height: 600px;
+        }
+
+        .image-panel {
+            background: #f8f9fa;
+            padding: 24px;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .image-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+            max-height: 800px;
+            overflow-y: auto;
+        }
+
+        #canvas-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        #image-canvas {
+            display: block;
+            max-width: 100%;
+        }
+
+        .bbox-overlay {
+            position: absolute;
+            border: 2px solid #0d6efd;
+            cursor: pointer;
+            transition: all 0.15s;
+            pointer-events: all;
+        }
+
+        .bbox-overlay:hover {
+            border-color: #0b5ed7;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+        }
+
+        .bbox-overlay.selected {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+        }
+
+        .bbox-label {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            background: #1a1a1a;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .annotation-panel {
+            background: white;
+            padding: 24px;
+            max-height: 800px;
+            overflow-y: auto;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            background: white;
+            color: #495057;
+        }
+
+        .btn:hover {
+            background: #f8f9fa;
+            border-color: #adb5bd;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary:hover {
+            background: #0b5ed7;
+            border-color: #0b5ed7;
+        }
+
+        .btn-success {
+            background: #198754;
+            color: white;
+            border-color: #198754;
+        }
+
+        .btn-success:hover {
+            background: #157347;
+            border-color: #157347;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background: #bb2d3b;
+            border-color: #bb2d3b;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #212529;
+            font-size: 13px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.15s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #6c757d;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .region-list {
+            margin-top: 24px;
+        }
+
+        .region-list h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .region-item {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+            border: 1px solid #e9ecef;
+        }
+
+        .region-item:hover {
+            border-color: #0d6efd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .region-item.selected {
+            border-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .region-item.annotated {
+            border-left: 3px solid #198754;
+        }
+
+        .region-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .region-text {
+            font-weight: 500;
+            color: #212529;
+            font-size: 13px;
+        }
+
+        .region-meta {
+            font-size: 11px;
+            color: #6c757d;
+        }
+
+        .drawing-mode {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .drawing-mode strong {
+            color: #856404;
+        }
+
+        #canvas-wrapper.drawing {
+            cursor: crosshair;
+        }
+
+        .temp-bbox {
+            position: absolute;
+            border: 2px dashed #ffc107;
+            background: rgba(255, 193, 7, 0.1);
+            pointer-events: none;
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            height: 4px;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            background: #0d6efd;
+            height: 100%;
+            transition: width 0.3s;
+        }
+
+        #annotation-form {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        #annotation-form h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 CoverOCR 独立标注工具 v2.0 Enhanced</h1>
+            <p style="opacity: 0.9; margin-top: 5px;">完全离线运行，支持打包下载图片+标注</p>
+            <div class="header-actions">
+                <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                <label for="image-upload" class="btn btn-primary">📤 上传图片</label>
+                <button class="btn btn-success" onclick="exportWithImages()">📦 导出完整数据集</button>
+                <button class="btn btn-success" onclick="exportJSONOnly()">💾 仅导出标注</button>
+                <button class="btn btn-success" onclick="importAnnotations()">📥 导入标注</button>
+                <button class="btn btn-danger" onclick="clearAll()">🗑️ 清空数据</button>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="image-panel">
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-images">0</div>
+                        <div class="stat-label">已上传图片</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-regions">0</div>
+                        <div class="stat-label">文字区域</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="annotated-regions">0</div>
+                        <div class="stat-label">已标注</div>
+                    </div>
+                </div>
+
+                <div id="drawing-hint" class="drawing-mode" style="display: none;">
+                    <strong>绘制模式</strong><br>
+                    在图片上拖动鼠标框选文字区域
+                </div>
+
+                <div class="image-container">
+                    <div id="canvas-wrapper">
+                        <canvas id="image-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="annotation-panel">
+                <div style="margin-bottom: 15px;">
+                    <button class="btn btn-primary" style="width: 100%;" onclick="startDrawing()">
+                        ✏️ 手动添加区域
+                    </button>
+                </div>
+
+                <div id="annotation-form" style="display: none;">
+                    <h3>编辑区域 #<span id="current-region-id">0</span></h3>
+
+                    <div class="form-group">
+                        <label>文字内容 *</label>
+                        <input type="text" id="text-content" placeholder="输入识别的文字">
+                    </div>
+
+                    <div class="form-group">
+                        <label>字体类别 *</label>
+                        <input type="text" id="font-family" list="font-family-list" placeholder="选择或输入字体">
+                        <datalist id="font-family-list">
+                            <option value="宋体">
+                            <option value="黑体">
+                            <option value="楷体">
+                            <option value="仿宋">
+                            <option value="Arial">
+                            <option value="Times New Roman">
+                            <option value="Helvetica">
+                            <option value="微软雅黑">
+                            <option value="思源宋体">
+                            <option value="思源黑体">
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <label>字号名称 *</label>
+                        <input type="text" id="font-size-name" list="font-size-list" placeholder="选择或输入字号">
+                        <datalist id="font-size-list">
+                            <option value="初号">
+                            <option value="小初">
+                            <option value="一号">
+                            <option value="小一">
+                            <option value="二号">
+                            <option value="小二">
+                            <option value="三号">
+                            <option value="小三">
+                            <option value="四号">
+                            <option value="小四">
+                            <option value="五号">
+                            <option value="小五">
+                            <option value="六号">
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <label>磅值 (Point Size) *</label>
+                        <input type="number" id="point-size" step="0.5" min="5" max="100" placeholder="如: 22">
+                        <small style="color: #666; font-size: 11px;">提示：测量实际高度或参考字号对照表</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>标注置信度</label>
+                        <select id="confidence">
+                            <option value="high">高 (非常确定)</option>
+                            <option value="medium">中 (基本确定)</option>
+                            <option value="low">低 (不太确定)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>备注（可选）</label>
+                        <textarea id="notes" rows="2" placeholder="如：加粗、倾斜、艺术字等"></textarea>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <button class="btn btn-primary" onclick="saveAnnotation()">💾 保存</button>
+                        <button class="btn btn-danger" onclick="deleteRegion()">🗑️ 删除</button>
+                    </div>
+                </div>
+
+                <div class="region-list" id="region-list">
+                    <h3 style="margin-bottom: 10px; color: #333;">文字区域列表</h3>
+                    <p style="color: #999; font-size: 13px;">暂无区域，请上传图片或手动添加</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="import-input" accept=".json" style="display: none;">
+
+    <script>
+        // 全局状态
+        let currentImageData = null;
+        let allImages = JSON.parse(localStorage.getItem('coverocr_images') || '[]');
+        let currentImageIndex = -1;
+        let selectedRegionIndex = null;
+        let isDrawing = false;
+        let drawStart = null;
+        let tempBboxDiv = null;
+
+        // 初始化
+        updateStats();
+
+        // 上传图片
+        document.getElementById('image-upload').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = new Image();
+                img.onload = () => {
+                    // 创建新图片数据
+                    const imageData = {
+                        id: Date.now(),
+                        name: file.name,
+                        width: img.width,
+                        height: img.height,
+                        dataURL: event.target.result,
+                        bookSize: '16k',
+                        bookWidthCm: 18.5,
+                        regions: []
+                    };
+
+                    allImages.push(imageData);
+                    currentImageIndex = allImages.length - 1;
+                    currentImageData = imageData;
+                    selectedRegionIndex = null;
+                    document.getElementById('annotation-form').style.display = 'none';
+                    updateRegionList();
+
+                    saveToLocalStorage();
+                    loadImage(imageData);
+                    updateStats();
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 加载图片到画布
+        function loadImage(imageData) {
+            const canvas = document.getElementById('image-canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+
+            img.onload = () => {
+                // 设置画布尺寸
+                const maxWidth = 900;
+                const scale = Math.min(1, maxWidth / img.width);
+                canvas.width = img.width * scale;
+                canvas.height = img.height * scale;
+
+                // 绘制图片
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                // 绘制所有边界框
+                drawAllBboxes();
+            };
+            img.src = imageData.dataURL;
+        }
+
+        // 绘制所有边界框
+        function drawAllBboxes() {
+            // 清除旧的
+            document.querySelectorAll('.bbox-overlay').forEach(el => el.remove());
+
+            if (!currentImageData) return;
+
+            const canvas = document.getElementById('image-canvas');
+            const wrapper = document.getElementById('canvas-wrapper');
+            const scale = canvas.width / currentImageData.width;
+
+            currentImageData.regions.forEach((region, index) => {
+                const [x1, y1, x2, y2] = region.bbox;
+                const div = document.createElement('div');
+                div.className = 'bbox-overlay';
+                if (index === selectedRegionIndex) div.classList.add('selected');
+                if (region.font_family && region.point_size) div.classList.add('annotated');
+
+                div.style.left = `${x1 * scale}px`;
+                div.style.top = `${y1 * scale}px`;
+                div.style.width = `${(x2 - x1) * scale}px`;
+                div.style.height = `${(y2 - y1) * scale}px`;
+
+                const label = document.createElement('div');
+                label.className = 'bbox-label';
+                label.textContent = region.text || `区域 ${index + 1}`;
+                div.appendChild(label);
+
+                div.onclick = () => selectRegion(index);
+                wrapper.appendChild(div);
+            });
+        }
+
+        // 开始绘制模式
+        function startDrawing() {
+            if (!currentImageData) {
+                alert('请先上传图片');
+                return;
+            }
+
+            isDrawing = true;
+            document.getElementById('drawing-hint').style.display = 'block';
+            document.getElementById('canvas-wrapper').classList.add('drawing');
+
+            const canvas = document.getElementById('image-canvas');
+            const wrapper = document.getElementById('canvas-wrapper');
+
+            canvas.onmousedown = (e) => {
+                if (!isDrawing) return;
+                const rect = canvas.getBoundingClientRect();
+                drawStart = {
+                    x: e.clientX - rect.left,
+                    y: e.clientY - rect.top
+                };
+
+                tempBboxDiv = document.createElement('div');
+                tempBboxDiv.className = 'temp-bbox';
+                tempBboxDiv.style.left = `${drawStart.x}px`;
+                tempBboxDiv.style.top = `${drawStart.y}px`;
+                wrapper.appendChild(tempBboxDiv);
+            };
+
+            canvas.onmousemove = (e) => {
+                if (!isDrawing || !drawStart || !tempBboxDiv) return;
+                const rect = canvas.getBoundingClientRect();
+                const currentX = e.clientX - rect.left;
+                const currentY = e.clientY - rect.top;
+
+                const width = Math.abs(currentX - drawStart.x);
+                const height = Math.abs(currentY - drawStart.y);
+                const left = Math.min(currentX, drawStart.x);
+                const top = Math.min(currentY, drawStart.y);
+
+                tempBboxDiv.style.left = `${left}px`;
+                tempBboxDiv.style.top = `${top}px`;
+                tempBboxDiv.style.width = `${width}px`;
+                tempBboxDiv.style.height = `${height}px`;
+            };
+
+            canvas.onmouseup = (e) => {
+                if (!isDrawing || !drawStart || !tempBboxDiv) return;
+
+                const rect = canvas.getBoundingClientRect();
+                const endX = e.clientX - rect.left;
+                const endY = e.clientY - rect.top;
+
+                const scale = canvas.width / currentImageData.width;
+                const bbox = [
+                    Math.min(drawStart.x, endX) / scale,
+                    Math.min(drawStart.y, endY) / scale,
+                    Math.max(drawStart.x, endX) / scale,
+                    Math.max(drawStart.y, endY) / scale
+                ];
+
+                // 添加新区域
+                currentImageData.regions.push({
+                    id: currentImageData.regions.length,
+                    text: '',
+                    bbox: bbox,
+                    font_family: '',
+                    font_size_name: '',
+                    point_size: 0,
+                    confidence: 'medium',
+                    notes: ''
+                });
+
+                saveToLocalStorage();
+                stopDrawing();
+                drawAllBboxes();
+                updateRegionList();
+                updateStats();
+
+                // 自动选中新区域
+                selectRegion(currentImageData.regions.length - 1);
+            };
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+            drawStart = null;
+            if (tempBboxDiv) {
+                tempBboxDiv.remove();
+                tempBboxDiv = null;
+            }
+            document.getElementById('drawing-hint').style.display = 'none';
+            document.getElementById('canvas-wrapper').classList.remove('drawing');
+
+            const canvas = document.getElementById('image-canvas');
+            canvas.onmousedown = null;
+            canvas.onmousemove = null;
+            canvas.onmouseup = null;
+        }
+
+        // 选择区域
+        function selectRegion(index) {
+            selectedRegionIndex = index;
+            const region = currentImageData.regions[index];
+
+            document.getElementById('annotation-form').style.display = 'block';
+            document.getElementById('current-region-id').textContent = index + 1;
+            document.getElementById('text-content').value = region.text || '';
+            document.getElementById('font-family').value = region.font_family || '';
+            document.getElementById('font-size-name').value = region.font_size_name || '';
+            document.getElementById('point-size').value = region.point_size || '';
+            document.getElementById('confidence').value = region.confidence || 'medium';
+            document.getElementById('notes').value = region.notes || '';
+
+            drawAllBboxes();
+            updateRegionList();
+        }
+
+        // 保存标注
+        function saveAnnotation() {
+            if (selectedRegionIndex === null) return;
+
+            const region = currentImageData.regions[selectedRegionIndex];
+            region.text = document.getElementById('text-content').value;
+            region.font_family = document.getElementById('font-family').value;
+            region.font_size_name = document.getElementById('font-size-name').value;
+            region.point_size = parseFloat(document.getElementById('point-size').value) || 0;
+            region.confidence = document.getElementById('confidence').value;
+            region.notes = document.getElementById('notes').value;
+
+            saveToLocalStorage();
+            drawAllBboxes();
+            updateRegionList();
+            updateStats();
+
+            alert('✅ 标注已保存');
+        }
+
+        // 删除区域
+        function deleteRegion() {
+            if (selectedRegionIndex === null) return;
+            if (!confirm('确定要删除这个区域吗？')) return;
+
+            currentImageData.regions.splice(selectedRegionIndex, 1);
+            selectedRegionIndex = null;
+            document.getElementById('annotation-form').style.display = 'none';
+
+            saveToLocalStorage();
+            drawAllBboxes();
+            updateRegionList();
+            updateStats();
+        }
+
+        // 更新区域列表
+        function updateRegionList() {
+            const list = document.getElementById('region-list');
+            list.innerHTML = '<h3 style="margin-bottom: 10px; color: #333;">文字区域列表</h3>';
+
+            if (!currentImageData || currentImageData.regions.length === 0) {
+                list.innerHTML += '<p style="color: #999; font-size: 13px;">暂无区域</p>';
+                return;
+            }
+
+            currentImageData.regions.forEach((region, index) => {
+                const div = document.createElement('div');
+                div.className = 'region-item';
+                if (index === selectedRegionIndex) div.classList.add('selected');
+                if (region.font_family && region.point_size) div.classList.add('annotated');
+
+                const status = (region.font_family && region.point_size) ? '✅' : '⏳';
+
+                div.innerHTML = `
+                    <div class="region-header">
+                        <span class="region-text">${status} ${region.text || `区域 ${index + 1}`}</span>
+                        <span style="font-size: 11px; color: #999;">#${index + 1}</span>
+                    </div>
+                    <div class="region-meta">
+                        ${region.font_family || '未标注'} · 
+                        ${region.font_size_name || '未标注'} · 
+                        ${region.point_size || '?'}pt
+                    </div>
+                `;
+                div.onclick = () => selectRegion(index);
+                list.appendChild(div);
+            });
+        }
+
+        // 更新统计
+        function updateStats() {
+            document.getElementById('total-images').textContent = allImages.length;
+
+            let totalRegions = 0;
+            let annotatedRegions = 0;
+            allImages.forEach(img => {
+                totalRegions += img.regions.length;
+                annotatedRegions += img.regions.filter(r => r.font_family && r.point_size).length;
+            });
+
+            document.getElementById('total-regions').textContent = totalRegions;
+            document.getElementById('annotated-regions').textContent = annotatedRegions;
+        }
+
+        // 保存到本地存储
+        function saveToLocalStorage() {
+            localStorage.setItem('coverocr_images', JSON.stringify(allImages));
+        }
+
+        // 导出完整数据集（图片 + JSON）
+        async function exportWithImages() {
+            if (allImages.length === 0) {
+                alert('没有可导出的数据');
+                return;
+            }
+
+            // 显示进度提示
+            const progressDiv = document.createElement('div');
+            progressDiv.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 9999; text-align: center; min-width: 400px;';
+            progressDiv.innerHTML = `
+                <h3 style="margin-bottom: 16px; color: #1a1a1a; font-size: 16px; font-weight: 600;">📦 正在打包数据集...</h3>
+                <div style="background: #e9ecef; height: 4px; border-radius: 2px; overflow: hidden; margin-bottom: 12px;">
+                    <div id="export-progress" style="background: #0d6efd; height: 100%; width: 0%; transition: width 0.3s;"></div>
+                </div>
+                <p id="export-status" style="color: #6c757d; font-size: 13px;">准备中...</p>
+            `;
+            document.body.appendChild(progressDiv);
+
+            try {
+                const zip = new JSZip();
+                const imagesFolder = zip.folder('images');
+                const annotationsFolder = zip.folder('annotations');
+
+                // 创建标注数据
+                const exportData = {
+                    version: '2.0',
+                    export_date: new Date().toISOString(),
+                    total_images: allImages.length,
+                    images: allImages.map(img => ({
+                        image_path: `images/${img.name}`,
+                        image_width: img.width,
+                        image_height: img.height,
+                        book_size: img.bookSize,
+                        book_width_cm: img.bookWidthCm,
+                        annotations: img.regions.map(r => ({
+                            id: r.id,
+                            text: r.text,
+                            bbox: r.bbox,
+                            font_family: r.font_family,
+                            font_size_name: r.font_size_name,
+                            point_size: r.point_size,
+                            confidence: r.confidence,
+                            notes: r.notes
+                        }))
+                    }))
+                };
+
+                // 添加 dataset.json
+                annotationsFolder.file('dataset.json', JSON.stringify(exportData, null, 2));
+
+                // 添加每张图片
+                for (let i = 0; i < allImages.length; i++) {
+                    const img = allImages[i];
+                    const progress = ((i + 1) / allImages.length * 100).toFixed(0);
+                    document.getElementById('export-progress').style.width = `${progress}%`;
+                    document.getElementById('export-status').textContent = `正在添加图片 ${i + 1}/${allImages.length}...`;
+
+                    // 将 dataURL 转换为 Blob
+                    const response = await fetch(img.dataURL);
+                    const blob = await response.blob();
+                    imagesFolder.file(img.name, blob);
+
+                    // 给浏览器一点时间更新 UI
+                    await new Promise(resolve => setTimeout(resolve, 10));
+                }
+
+                // 添加 README
+                const readme = `# CoverOCR 数据集
+
+## 数据集信息
+- 版本: ${exportData.version}
+- 导出日期: ${exportData.export_date}
+- 图片数量: ${exportData.total_images}
+- 总文字区域: ${exportData.images.reduce((sum, img) => sum + img.annotations.length, 0)}
+
+## 目录结构
+\`\`\`
+coverocr_dataset/
+├── images/              # 原始图片
+│   ├── book_001.jpg
+│   └── ...
+├── annotations/         # 标注文件
+│   └── dataset.json
+└── README.md           # 本文件
+\`\`\`
+
+## 使用方法
+
+1. 解压此 ZIP 文件
+2. 将整个文件夹复制到项目的 data/ 目录
+3. 运行数据检查：
+   \`\`\`bash
+   python scripts/check_dataset.py
+   \`\`\`
+4. 开始训练：
+   \`\`\`bash
+   python scripts/train_model.py
+   \`\`\`
+
+## 数据格式
+
+详见 annotations/dataset.json，每个标注包含：
+- text: 文字内容
+- bbox: 边界框 [x_min, y_min, x_max, y_max]
+- font_family: 字体类别
+- font_size_name: 字号名称
+- point_size: 磅值
+- confidence: 标注置信度
+`;
+                zip.file('README.md', readme);
+
+                // 生成 ZIP
+                document.getElementById('export-status').textContent = '正在生成 ZIP 文件...';
+                const content = await zip.generateAsync({
+                    type: 'blob',
+                    compression: 'DEFLATE',
+                    compressionOptions: { level: 6 }
+                }, (metadata) => {
+                    const progress = metadata.percent.toFixed(0);
+                    document.getElementById('export-progress').style.width = `${progress}%`;
+                });
+
+                // 下载
+                const timestamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+                saveAs(content, `coverocr_dataset_${timestamp}.zip`);
+
+                document.body.removeChild(progressDiv);
+                alert(`✅ 成功导出完整数据集！\n\n包含：\n- ${allImages.length} 张图片\n- ${exportData.images.reduce((sum, img) => sum + img.annotations.length, 0)} 个文字区域\n\n请解压后复制到项目的 data/ 目录`);
+
+            } catch (err) {
+                document.body.removeChild(progressDiv);
+                alert('导出失败：' + err.message);
+                console.error(err);
+            }
+        }
+
+        // 仅导出 JSON 标注
+        function exportJSONOnly() {
+            if (allImages.length === 0) {
+                alert('没有可导出的数据');
+                return;
+            }
+
+            const exportData = {
+                version: '2.0',
+                export_date: new Date().toISOString(),
+                total_images: allImages.length,
+                images: allImages.map(img => ({
+                    image_path: `images/${img.name}`,
+                    image_width: img.width,
+                    image_height: img.height,
+                    book_size: img.bookSize,
+                    book_width_cm: img.bookWidthCm,
+                    annotations: img.regions.map(r => ({
+                        id: r.id,
+                        text: r.text,
+                        bbox: r.bbox,
+                        font_family: r.font_family,
+                        font_size_name: r.font_size_name,
+                        point_size: r.point_size,
+                        confidence: r.confidence,
+                        notes: r.notes
+                    }))
+                }))
+            };
+
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `coverocr_annotations_${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+
+            alert(`✅ 已导出 ${allImages.length} 张图片的标注数据\n\n⚠️ 注意：此文件仅包含标注信息，不包含图片。\n请手动复制图片到 data/images/ 目录。`);
+        }
+
+        // 导入标注
+        function importAnnotations() {
+            document.getElementById('import-input').click();
+        }
+
+        document.getElementById('import-input').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                try {
+                    const data = JSON.parse(event.target.result);
+                    if (confirm(`确定要导入 ${data.images?.length || 0} 张图片的标注数据吗？这将覆盖现有数据。`)) {
+                        // 这里需要用户重新上传对应的图片
+                        alert('导入功能需要配合图片文件，请手动上传图片后再导入标注');
+                    }
+                } catch (err) {
+                    alert('JSON 格式错误：' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        // 清空所有数据
+        function clearAll() {
+            if (!confirm('确定要清空所有数据吗？此操作不可恢复！')) return;
+
+            localStorage.removeItem('coverocr_images');
+            allImages = [];
+            currentImageData = null;
+            currentImageIndex = -1;
+            selectedRegionIndex = null;
+
+            document.getElementById('image-canvas').getContext('2d').clearRect(0, 0, 1000, 1000);
+            document.getElementById('annotation-form').style.display = 'none';
+            updateStats();
+            updateRegionList();
+
+            alert('✅ 数据已清空');
+        }
+    </script>
+</body>
+
+</html>

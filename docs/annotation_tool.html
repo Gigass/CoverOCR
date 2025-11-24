@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoverOCR 字体标注工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 20px;
+            padding: 30px;
+        }
+        
+        .image-panel {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .image-container {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        #preview-image {
+            width: 100%;
+            display: block;
+        }
+        
+        .bbox {
+            position: absolute;
+            border: 3px solid #667eea;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .bbox:hover {
+            border-color: #764ba2;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+        }
+        
+        .bbox.selected {
+            border-color: #ff6b6b;
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+        }
+        
+        .bbox-label {
+            position: absolute;
+            top: -25px;
+            left: 0;
+            background: #667eea;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        
+        .annotation-panel {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            max-height: 800px;
+            overflow-y: auto;
+        }
+        
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        .file-input-label {
+            display: block;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-weight: 500;
+        }
+        
+        .file-input-label:hover {
+            transform: translateY(-2px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .region-list {
+            margin-top: 20px;
+        }
+        
+        .region-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        
+        .region-item:hover {
+            transform: translateX(5px);
+            border-color: #667eea;
+        }
+        
+        .region-item.selected {
+            border-color: #ff6b6b;
+            background: #fff5f5;
+        }
+        
+        .region-text {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .region-meta {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-success {
+            background: #51cf66;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #40c057;
+        }
+        
+        .stats {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .stats-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .stats-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 CoverOCR 字体标注工具</h1>
+            <p>上传教材封面图片，标注文字区域的字体和字号</p>
+        </div>
+        
+        <div class="main">
+            <div class="image-panel">
+                <div class="upload-section">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="image-upload" accept="image/*">
+                        <label for="image-upload" class="file-input-label">
+                            📤 选择图片上传
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="image-container" id="image-container">
+                    <img id="preview-image" style="display: none;">
+                </div>
+            </div>
+            
+            <div class="annotation-panel">
+                <div class="stats">
+                    <div class="stats-number" id="region-count">0</div>
+                    <div class="stats-label">文字区域</div>
+                </div>
+                
+                <div id="annotation-form" style="display: none;">
+                    <h3 style="margin-bottom: 15px;">当前选中区域</h3>
+                    
+                    <div class="form-group">
+                        <label>文字内容</label>
+                        <input type="text" id="text-content" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>字体类别</label>
+                        <select id="font-family">
+                            <option value="">请选择</option>
+                            <option value="宋体">宋体</option>
+                            <option value="黑体">黑体</option>
+                            <option value="楷体">楷体</option>
+                            <option value="仿宋">仿宋</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="自定义">自定义</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>字号名称</label>
+                        <select id="font-size-name">
+                            <option value="">请选择</option>
+                            <option value="初号">初号 (42pt)</option>
+                            <option value="小初">小初 (36pt)</option>
+                            <option value="一号">一号 (26pt)</option>
+                            <option value="小一">小一 (24pt)</option>
+                            <option value="二号">二号 (22pt)</option>
+                            <option value="小二">小二 (18pt)</option>
+                            <option value="三号">三号 (16pt)</option>
+                            <option value="小三">小三 (15pt)</option>
+                            <option value="四号">四号 (14pt)</option>
+                            <option value="小四">小四 (12pt)</option>
+                            <option value="五号">五号 (10.5pt)</option>
+                            <option value="小五">小五 (9pt)</option>
+                            <option value="自定义">自定义</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>磅值 (Point Size)</label>
+                        <input type="number" id="point-size" step="0.5" min="5" max="100" placeholder="如: 22">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>标注置信度</label>
+                        <select id="confidence">
+                            <option value="high">高 (非常确定)</option>
+                            <option value="medium">中 (基本确定)</option>
+                            <option value="low">低 (不太确定)</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="saveAnnotation()">💾 保存标注</button>
+                </div>
+                
+                <div class="region-list" id="region-list"></div>
+                
+                <button class="btn btn-success" onclick="exportJSON()" style="margin-top: 20px;">
+                    📥 导出 JSON
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentImage = null;
+        let regions = [];
+        let selectedRegionIndex = null;
+        
+        document.getElementById('image-upload').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = document.getElementById('preview-image');
+                img.src = event.target.result;
+                img.style.display = 'block';
+                currentImage = {
+                    name: file.name,
+                    data: event.target.result
+                };
+                
+                // 调用 OCR API 获取文字区域
+                callOCRAPI(file);
+            };
+            reader.readAsDataURL(file);
+        });
+        
+        async function callOCRAPI(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('book_size', '16k');
+            
+            try {
+                const uploadRes = await fetch('http://localhost:8000/api/v1/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const { request_id } = await uploadRes.json();
+                
+                // 轮询获取结果
+                let attempts = 0;
+                const pollResult = setInterval(async () => {
+                    attempts++;
+                    const resultRes = await fetch(`http://localhost:8000/api/v1/result/${request_id}`);
+                    if (resultRes.ok) {
+                        const result = await resultRes.json();
+                        clearInterval(pollResult);
+                        loadRegions(result.texts);
+                    } else if (attempts > 10) {
+                        clearInterval(pollResult);
+                        alert('OCR 识别超时，请重试');
+                    }
+                }, 1500);
+            } catch (err) {
+                console.error('OCR API 调用失败:', err);
+                alert('无法连接到后端服务，请确保服务已启动');
+            }
+        }
+        
+        function loadRegions(texts) {
+            const img = document.getElementById('preview-image');
+            const container = document.getElementById('image-container');
+            
+            // 清除旧的边界框
+            container.querySelectorAll('.bbox').forEach(el => el.remove());
+            
+            regions = texts.map((text, index) => ({
+                index,
+                text: text.content,
+                bbox: text.box || [[0,0],[0,0],[0,0],[0,0]], // OCR 返回的坐标
+                font_family: '',
+                font_size_name: '',
+                point_size: text.point_size || 0,
+                confidence: 'medium'
+            }));
+            
+            // 绘制边界框
+            regions.forEach((region, index) => {
+                const bbox = region.bbox;
+                const xs = bbox.map(p => p[0]);
+                const ys = bbox.map(p => p[1]);
+                const x = Math.min(...xs);
+                const y = Math.min(...ys);
+                const w = Math.max(...xs) - x;
+                const h = Math.max(...ys) - y;
+                
+                const div = document.createElement('div');
+                div.className = 'bbox';
+                div.dataset.index = index;
+                div.style.left = `${x}px`;
+                div.style.top = `${y}px`;
+                div.style.width = `${w}px`;
+                div.style.height = `${h}px`;
+                
+                const label = document.createElement('div');
+                label.className = 'bbox-label';
+                label.textContent = region.text.substring(0, 10);
+                div.appendChild(label);
+                
+                div.onclick = () => selectRegion(index);
+                container.appendChild(div);
+            });
+            
+            updateRegionList();
+            document.getElementById('region-count').textContent = regions.length;
+        }
+        
+        function selectRegion(index) {
+            selectedRegionIndex = index;
+            const region = regions[index];
+            
+            // 更新边界框样式
+            document.querySelectorAll('.bbox').forEach((el, i) => {
+                el.classList.toggle('selected', i === index);
+            });
+            
+            // 更新表单
+            document.getElementById('annotation-form').style.display = 'block';
+            document.getElementById('text-content').value = region.text;
+            document.getElementById('font-family').value = region.font_family;
+            document.getElementById('font-size-name').value = region.font_size_name;
+            document.getElementById('point-size').value = region.point_size;
+            document.getElementById('confidence').value = region.confidence;
+            
+            updateRegionList();
+        }
+        
+        function saveAnnotation() {
+            if (selectedRegionIndex === null) return;
+            
+            const region = regions[selectedRegionIndex];
+            region.font_family = document.getElementById('font-family').value;
+            region.font_size_name = document.getElementById('font-size-name').value;
+            region.point_size = parseFloat(document.getElementById('point-size').value);
+            region.confidence = document.getElementById('confidence').value;
+            
+            updateRegionList();
+            alert('✅ 标注已保存');
+        }
+        
+        function updateRegionList() {
+            const list = document.getElementById('region-list');
+            list.innerHTML = '<h3 style="margin-bottom: 15px;">文字区域列表</h3>';
+            
+            regions.forEach((region, index) => {
+                const div = document.createElement('div');
+                div.className = 'region-item';
+                if (index === selectedRegionIndex) div.classList.add('selected');
+                
+                const isAnnotated = region.font_family && region.font_size_name;
+                const status = isAnnotated ? '✅' : '⏳';
+                
+                div.innerHTML = `
+                    <div class="region-text">${status} ${region.text}</div>
+                    <div class="region-meta">
+                        ${region.font_family || '未标注'} · 
+                        ${region.font_size_name || '未标注'} · 
+                        ${region.point_size || '?'}pt
+                    </div>
+                `;
+                div.onclick = () => selectRegion(index);
+                list.appendChild(div);
+            });
+        }
+        
+        function exportJSON() {
+            const img = document.getElementById('preview-image');
+            const data = {
+                image_path: currentImage?.name || 'unknown.jpg',
+                image_width: img.naturalWidth,
+                image_height: img.naturalHeight,
+                book_size: '16k',
+                annotations: regions.map(r => ({
+                    text: r.text,
+                    bbox: [
+                        Math.min(...r.bbox.map(p => p[0])),
+                        Math.min(...r.bbox.map(p => p[1])),
+                        Math.max(...r.bbox.map(p => p[0])),
+                        Math.max(...r.bbox.map(p => p[1]))
+                    ],
+                    font_family: r.font_family,
+                    font_size_name: r.font_size_name,
+                    point_size: r.point_size,
+                    confidence: r.confidence
+                }))
+            };
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `annotation_${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

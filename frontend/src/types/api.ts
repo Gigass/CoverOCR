@@ -1,6 +1,7 @@
 export interface RecognizedText {
   content: string
   font?: string
+  formatted_typography?: string
   confidence: number
   font_confidence?: number
 }
