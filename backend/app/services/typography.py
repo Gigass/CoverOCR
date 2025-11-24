@@ -95,8 +95,21 @@ class TypographyEstimator:
 
         # Formula: points = pixels * (72 / DPI)
         # Refinement: Character height is ~80% of box height
-        estimated_char_height_px = pixel_height * 0.8
-        point_size = estimated_char_height_px * (72.0 / dpi)
+        # estimated_char_height_px = pixel_height * 0.8
+        # point_size = estimated_char_height_px * (72.0 / dpi)
+        
+        # Calibration (2025-11-24):
+        # Theoretical k = 0.8 * 72 = 57.6
+        # Empirical k (Median) = 26.2
+        # point_size = k * (pixel_height / image_width) * book_width_inch
+        
+        k_factor = 26.2
+        if image_width > 0:
+            term = (pixel_height / image_width) * book_width_inch
+            point_size = k_factor * term
+        else:
+            # Fallback if image width is missing
+            point_size = pixel_height * (k_factor / 72.0) # Rough approximation
 
         # Round to nearest 0.5
         point_size = round(point_size * 2) / 2

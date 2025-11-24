@@ -1,0 +1,6 @@
+[FontClassifier] Initializing...
+[FontClassifier] Checking for custom model at /Users/gigass/DEVELOP/GitHub/CoverOCR/models/custom_font_classifier
+[FontClassifier] Failed to load custom model: name 'json' is not defined
+[FontClassifier] Initializing...
+[FontClassifier] Checking for custom model at /Users/gigass/DEVELOP/GitHub/CoverOCR/models/custom_font_classifier
+[FontClassifier] Loaded custom model.

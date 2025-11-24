@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 import os
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Tuple
@@ -10,6 +11,10 @@ import cv2
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
+import paddle
+import paddle.nn as nn
+import paddle.vision.transforms as T
+from paddle.vision.models import resnet18
 from paddle.inference import Config, create_predictor
 from paddleclas.paddleclas import check_model_file
 
@@ -279,18 +284,90 @@ class HeuristicFontClassifier:
         }
 
 
+class CustomResNetFontClassifier:
+    """Fine-tuned ResNet18 classifier for specific book cover fonts."""
+
+    def __init__(self, model_dir: Path) -> None:
+        self.model_dir = model_dir
+        self.params_path = model_dir / "font_resnet18.pdparams"
+        self.mapping_path = model_dir / "class_mapping.json"
+        
+        if not self.params_path.exists() or not self.mapping_path.exists():
+            raise FileNotFoundError("Custom model files not found")
+            
+        with open(self.mapping_path, 'r', encoding='utf-8') as f:
+            self.classes = json.load(f)
+            
+        # Initialize model structure
+        self.model = resnet18(pretrained=False)
+        in_features = self.model.fc.weight.shape[0]
+        self.model.fc = nn.Linear(in_features, len(self.classes))
+        
+        # Load weights
+        state_dict = paddle.load(str(self.params_path))
+        self.model.set_state_dict(state_dict)
+        self.model.eval()
+        
+        # Transforms (must match training)
+        self.transform = T.Compose([
+            T.Resize((224, 224)),
+            T.ToTensor(),
+            T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+        ])
+        
+    def predict(self, text: str, crop: Optional[np.ndarray]) -> Optional[Tuple[str, float]]:
+        if crop is None or crop.size == 0:
+            return None
+            
+        try:
+            # Preprocess
+            img = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
+            img_tensor = self.transform(img)
+            img_tensor = img_tensor.unsqueeze(0)
+            
+            with paddle.no_grad():
+                outputs = self.model(img_tensor)
+                probs = paddle.nn.functional.softmax(outputs, axis=1)
+                score, idx = paddle.topk(probs, k=1)
+                
+            label = self.classes[idx.item()]
+            confidence = score.item()
+            
+            return label, confidence
+        except Exception as e:
+            print(f"[CustomFontClassifier] Prediction failed: {e}")
+            return None
+
 class FontClassifier:
     """Facade that tries PaddleClas gallery first, then falls back to heuristics."""
 
     def __init__(self) -> None:
-        self._advanced: Optional[PaddleClasFontClassifier] = None
+        self._custom: Optional[CustomResNetFontClassifier] = None
+        self._advanced: Optional[PaddleClasFeatureExtractor] = None # Deprecated/Fallback
+        
+        # Try loading custom model first
         try:
-            self._advanced = PaddleClasFontClassifier()
-        except Exception as exc:  # noqa: BLE001
-            print(f"[FontClassifier] PaddleClas 初始化失败，使用启发式策略。原因：{exc}")
+            custom_model_dir = Path("models/custom_font_classifier")
+            if custom_model_dir.exists():
+                self._custom = CustomResNetFontClassifier(custom_model_dir)
+                print("[FontClassifier] 已加载微调后的 ResNet18 模型。")
+        except Exception as exc:
+             print(f"[FontClassifier] 加载微调模型失败: {exc}")
+
+        if not self._custom:
+            try:
+                self._advanced = PaddleClasFontClassifier()
+            except Exception as exc:  # noqa: BLE001
+                print(f"[FontClassifier] PaddleClas 初始化失败，使用启发式策略。原因：{exc}")
+        
         self._fallback = HeuristicFontClassifier()
 
     def predict(self, text: str, crop: Optional[np.ndarray]) -> Tuple[str, float]:
+        if self._custom:
+            result = self._custom.predict(text, crop)
+            if result:
+                return result
+                
         if self._advanced:
             result = self._advanced.predict(text, crop)
             if result:
