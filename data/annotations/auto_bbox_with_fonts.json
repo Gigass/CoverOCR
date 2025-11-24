@@ -1,0 +1,5935 @@
+{
+  "version": "auto-bbox-v1",
+  "export_date": "2025-11-24T07:15:57.161645+00:00",
+  "total_images": 52,
+  "images": [
+    {
+      "image_path": "images/IMG_2972.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            446,
+            386,
+            1942,
+            488
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9854"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1546,
+            575,
+            2298,
+            659
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9931"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1550,
+            672,
+            2311,
+            735
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9877"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            419,
+            2434,
+            2498,
+            2728
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9968"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            497,
+            2871,
+            2648,
+            3076
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Vrtificial Intelligence and Machine Learning score=75.0 conf=0.9600"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            510,
+            3048,
+            1325,
+            3181
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9889"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            355,
+            3346,
+            1037,
+            3458
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9917"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2973.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            745,
+            652,
+            2022,
+            872
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9899"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1638,
+            921,
+            2305,
+            1078
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9952"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1643,
+            997,
+            2301,
+            1141
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st CenturyTextbooks of General Education score=77.64705882352942 conf=0.9122"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            374,
+            2363,
+            2233,
+            2874
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9972"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            367,
+            2748,
+            2313,
+            3224
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Vrtificial Intelligence and Machine Learning score=75.0 conf=0.9671"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            382,
+            2923,
+            1637,
+            3239
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9883"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            199,
+            3163,
+            814,
+            3356
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9942"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2974.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            223,
+            341,
+            1718,
+            634
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9872"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1315,
+            475,
+            2095,
+            654
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9944"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1385,
+            560,
+            2103,
+            712
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9666"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            566,
+            2240,
+            2658,
+            2804
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9956"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            708,
+            2643,
+            2880,
+            3136
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Vrtificial Intelligence and Machine Learning score=75.0 conf=0.9659"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            764,
+            3053,
+            1622,
+            3289
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9928"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            647,
+            3415,
+            1389,
+            3616
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9968"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2975.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            421,
+            437,
+            1937,
+            525
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9884"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1455,
+            621,
+            2299,
+            732
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9976"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1559,
+            722,
+            2299,
+            794
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9636"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            399,
+            2524,
+            2505,
+            2768
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9951"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            498,
+            2978,
+            2651,
+            3108
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9724"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            506,
+            3158,
+            1354,
+            3255
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9971"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            348,
+            3465,
+            1057,
+            3549
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9988"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2976.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            1078,
+            130,
+            2531,
+            727
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9885"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1965,
+            639,
+            2809,
+            1058
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9955"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            2045,
+            776,
+            2684,
+            1078
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Edue score=91.35802469135803 conf=0.9358"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            308,
+            2050,
+            2333,
+            3007
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9934"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            316,
+            2501,
+            2296,
+            3352
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9694"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            533,
+            2755,
+            1601,
+            3238
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=覃雄派赵素云张静编著 score=83.33333333333334 conf=0.9922"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            59,
+            2884,
+            705,
+            3198
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9972"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2977.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            494,
+            508,
+            1963,
+            614
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9886"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1464,
+            696,
+            2312,
+            824
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9961"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1572,
+            810,
+            2303,
+            887
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9779"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            434,
+            2504,
+            2392,
+            2822
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9941"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            466,
+            2917,
+            2511,
+            3152
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Vrtificial Intelligence and Machine Learning score=75.0 conf=0.9544"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            505,
+            3081,
+            1016,
+            3202
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派 score=60.0 conf=0.9941"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            359,
+            3350,
+            1007,
+            3467
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9980"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2978.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            773,
+            143,
+            2379,
+            440
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9890"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1776,
+            473,
+            2742,
+            745
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9916"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1891,
+            614,
+            2732,
+            806
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9571"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            367,
+            2279,
+            2498,
+            2959
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9948"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            416,
+            2726,
+            2539,
+            3343
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9579"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            392,
+            2896,
+            922,
+            3111
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派 score=60.0 conf=0.9940"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            209,
+            3141,
+            864,
+            3382
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9982"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2979.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            384,
+            355,
+            1939,
+            561
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9881"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1545,
+            536,
+            2326,
+            669
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9958"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1545,
+            624,
+            2338,
+            749
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9427"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            509,
+            2522,
+            2614,
+            2812
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9507"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            626,
+            2973,
+            2772,
+            3147
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9697"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            631,
+            3192,
+            1461,
+            3285
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9944"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            503,
+            3499,
+            1186,
+            3570
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9980"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2980.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            425,
+            264,
+            2144,
+            387
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9865"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1701,
+            491,
+            2560,
+            588
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9931"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1692,
+            596,
+            2578,
+            676
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9605"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            440,
+            2635,
+            2752,
+            2959
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9918"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            539,
+            3115,
+            2897,
+            3345
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9736"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            535,
+            3299,
+            1450,
+            3454
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9929"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            368,
+            3623,
+            1127,
+            3752
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9953"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2981.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            385,
+            247,
+            1986,
+            400
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9891"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1584,
+            436,
+            2381,
+            547
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9960"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1576,
+            533,
+            2393,
+            618
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9642"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            399,
+            2486,
+            2672,
+            2735
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9969"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            507,
+            2974,
+            2844,
+            3108
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9778"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            507,
+            3175,
+            1409,
+            3268
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9537"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            348,
+            3498,
+            1096,
+            3591
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9964"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2982.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            364,
+            268,
+            2041,
+            417
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9890"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1495,
+            483,
+            2453,
+            571
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9954"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1615,
+            588,
+            2470,
+            651
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9506"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            351,
+            2637,
+            2716,
+            2916
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9949"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            446,
+            3145,
+            2896,
+            3310
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9681"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            463,
+            3347,
+            1393,
+            3462
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9943"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            286,
+            3670,
+            1071,
+            3794
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9947"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2983.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            480,
+            499,
+            1999,
+            639
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9872"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1619,
+            684,
+            2385,
+            786
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9956"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1628,
+            781,
+            2393,
+            849
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9695"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            524,
+            2671,
+            2676,
+            2902
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9976"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            618,
+            3141,
+            2857,
+            3264
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9718"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            622,
+            3326,
+            1491,
+            3423
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9941"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            463,
+            3641,
+            1191,
+            3743
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9993"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2984.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            445,
+            490,
+            2012,
+            652
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9883"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1593,
+            697,
+            2393,
+            798
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9954"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1597,
+            793,
+            2402,
+            874
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9740"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            488,
+            2695,
+            2587,
+            2954
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9970"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            536,
+            3119,
+            2733,
+            3315
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Nrtificial Intelligence and Machine Learning score=75.0 conf=0.9574"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            596,
+            3296,
+            1410,
+            3416
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9975"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            450,
+            3590,
+            1131,
+            3684
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9992"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2985.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            647,
+            646,
+            2085,
+            795
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9879"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1690,
+            876,
+            2412,
+            1014
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9937"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1678,
+            973,
+            2411,
+            1089
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st CenturyTextboksofGeneral Education score=58.53658536585367 conf=0.9408"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            508,
+            2580,
+            2430,
+            2993
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9959"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            523,
+            2982,
+            2530,
+            3327
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Artificial Intelligence and Machine Learning score=100.0 conf=0.9633"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            577,
+            3147,
+            1382,
+            3325
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9937"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            423,
+            3399,
+            1042,
+            3539
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9987"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2986.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            454,
+            2708,
+            2811,
+            2988
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9884"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1714,
+            458,
+            2594,
+            542
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9957"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1701,
+            563,
+            2608,
+            630
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9798"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            454,
+            2708,
+            2811,
+            2988
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9884"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            557,
+            3182,
+            2978,
+            3395
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9694"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            571,
+            3393,
+            1495,
+            3499
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9969"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            399,
+            3734,
+            1169,
+            3814
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9998"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2987.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            270,
+            318,
+            2059,
+            463
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9884"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1585,
+            562,
+            2492,
+            668
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9951"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1598,
+            684,
+            2505,
+            760
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9730"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            416,
+            2784,
+            2638,
+            3042
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9961"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            536,
+            3225,
+            2776,
+            3403
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9692"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            553,
+            3410,
+            1483,
+            3520
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9911"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            412,
+            3695,
+            1118,
+            3789
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9964"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2988.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            420,
+            251,
+            2114,
+            391
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9855"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1695,
+            494,
+            2510,
+            623
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9923"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1696,
+            600,
+            2518,
+            690
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9865"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            429,
+            2624,
+            2772,
+            2907
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9949"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            562,
+            3141,
+            2930,
+            3285
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9829"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            541,
+            3343,
+            1590,
+            3453
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云弓 score=75.0 conf=0.9408"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            356,
+            3700,
+            1164,
+            3789
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9960"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2989.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            249,
+            290,
+            2122,
+            399
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9890"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1662,
+            567,
+            2547,
+            655
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9938"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1654,
+            693,
+            2560,
+            752
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9758"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            416,
+            2801,
+            2634,
+            3033
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9954"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            541,
+            3238,
+            2775,
+            3394
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9727"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            549,
+            3427,
+            1482,
+            3524
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9736"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            404,
+            3734,
+            1117,
+            3805
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9943"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2990.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            355,
+            406,
+            2111,
+            581
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9905"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1660,
+            708,
+            2502,
+            859
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9947"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1652,
+            826,
+            2510,
+            942
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9622"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            385,
+            2791,
+            2510,
+            3072
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9949"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            497,
+            3225,
+            2613,
+            3403
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9720"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            502,
+            3406,
+            1341,
+            3508
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9841"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            352,
+            3704,
+            1048,
+            3763
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9970"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2991.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            511,
+            584,
+            1886,
+            655
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9895"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1525,
+            727,
+            2229,
+            798
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9939"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            451,
+            2927,
+            2947,
+            3053
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9715"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            369,
+            2423,
+            2698,
+            2663
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9941"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            451,
+            2927,
+            2947,
+            3053
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9715"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            430,
+            3154,
+            1426,
+            3242
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9931"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            198,
+            3553,
+            1070,
+            3637
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9946"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2992.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            590,
+            2104,
+            2702,
+            2856
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9953"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1190,
+            828,
+            1838,
+            995
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9963"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            820,
+            2449,
+            2993,
+            3199
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9751"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            590,
+            2104,
+            2702,
+            2856
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9953"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            820,
+            2449,
+            2993,
+            3199
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9751"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            843,
+            2988,
+            1850,
+            3396
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9855"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            747,
+            3447,
+            1629,
+            3814
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9977"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2993.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            218,
+            2229,
+            2806,
+            2555
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9898"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1511,
+            491,
+            2372,
+            601
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9967"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            312,
+            2767,
+            3021,
+            2975
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9802"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            218,
+            2229,
+            2806,
+            2555
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9898"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            312,
+            2767,
+            3021,
+            2975
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9802"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            282,
+            2993,
+            1363,
+            3134
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9838"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            29,
+            3388,
+            950,
+            3512
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9959"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2994.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            441,
+            2762,
+            2622,
+            3068
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9935"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1628,
+            550,
+            2565,
+            660
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9943"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1624,
+            693,
+            2582,
+            752
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9635"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            441,
+            2762,
+            2622,
+            3068
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9935"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1624,
+            693,
+            2582,
+            752
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=21st Century Textbooks of General Education score=27.586206896551722 conf=0.9635"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            1628,
+            550,
+            2565,
+            660
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9943"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            502,
+            3565,
+            1160,
+            3646
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9942"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2995.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            674,
+            2528,
+            2749,
+            2772
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9953"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            360,
+            1024,
+            400,
+            1139
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=秋月 score=0.0 conf=0.9916"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            793,
+            2960,
+            2897,
+            3160
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9680"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            674,
+            2528,
+            2749,
+            2772
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9953"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            793,
+            2960,
+            2897,
+            3160
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9680"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            784,
+            3186,
+            1780,
+            3341
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9811"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            594,
+            3538,
+            1395,
+            3707
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9947"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2996.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            391,
+            2558,
+            2635,
+            2949
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9952"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1491,
+            260,
+            2371,
+            584
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9955"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1498,
+            373,
+            2380,
+            652
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21s Century Textbooks of General Education score=98.82352941176471 conf=0.9419"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            391,
+            2558,
+            2635,
+            2949
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9952"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            474,
+            3001,
+            2851,
+            3467
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9685"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            492,
+            3209,
+            1896,
+            3507
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9943"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            351,
+            3503,
+            998,
+            3688
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9935"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2997.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            433,
+            160,
+            2054,
+            478
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9896"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1608,
+            341,
+            2490,
+            524
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9940"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1604,
+            447,
+            2511,
+            603
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9766"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            461,
+            2572,
+            2743,
+            2892
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9975"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            547,
+            3034,
+            2924,
+            3321
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9516"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            433,
+            160,
+            2054,
+            478
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=0.0 conf=0.9896"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            414,
+            3513,
+            1099,
+            3665
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9925"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2998.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            502,
+            50,
+            2121,
+            455
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9863"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1711,
+            490,
+            2432,
+            711
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9442"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1753,
+            597,
+            2435,
+            772
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9145"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            573,
+            2497,
+            2631,
+            2799
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9936"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            693,
+            2925,
+            2760,
+            3191
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9701"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            693,
+            3193,
+            1605,
+            3380
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9956"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            508,
+            3567,
+            1318,
+            3745
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9978"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_2999.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            425,
+            176,
+            2226,
+            299
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9865"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1768,
+            448,
+            2634,
+            581
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9950"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1765,
+            571,
+            2642,
+            660
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9786"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            566,
+            2590,
+            2656,
+            2832
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9931"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            669,
+            2998,
+            2776,
+            3168
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9799"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            687,
+            3170,
+            1216,
+            3260
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派 score=60.0 conf=0.9934"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            545,
+            3435,
+            1221,
+            3529
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9989"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3001.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            240,
+            2406,
+            2762,
+            2671
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9965"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1503,
+            600,
+            2251,
+            689
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9941"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            322,
+            2961,
+            3016,
+            3096
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9723"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            240,
+            2406,
+            2762,
+            2671
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9965"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            322,
+            2961,
+            3016,
+            3096
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9723"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            279,
+            3183,
+            2144,
+            3318
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9970"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            43,
+            3646,
+            975,
+            3734
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9928"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3002.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            412,
+            89,
+            1898,
+            570
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9867"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1441,
+            191,
+            2327,
+            485
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9936"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1455,
+            284,
+            2338,
+            556
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9657"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            361,
+            2465,
+            2715,
+            2734
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9952"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            344,
+            2911,
+            2985,
+            3250
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Artificial Intelligence and Machine Learning score=100.0 conf=0.9581"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            409,
+            3134,
+            1962,
+            3371
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9980"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            253,
+            3457,
+            941,
+            3637
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9950"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3003.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            422,
+            6,
+            2095,
+            507
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9861"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1682,
+            524,
+            2407,
+            774
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9918"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1709,
+            630,
+            2406,
+            835
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9658"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            386,
+            2607,
+            2656,
+            2916
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9927"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            521,
+            3076,
+            2808,
+            3371
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9535"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            516,
+            3382,
+            1575,
+            3590
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9960"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            296,
+            3823,
+            1233,
+            4031
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=M中国人民大学出版社 score=94.73684210526316 conf=0.9183"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3004.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            163,
+            214,
+            2122,
+            324
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9884"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1628,
+            495,
+            2582,
+            601
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9956"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1624,
+            634,
+            2586,
+            697
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9736"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            394,
+            2805,
+            2634,
+            3058
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9960"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            510,
+            3242,
+            2763,
+            3403
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9610"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            532,
+            3418,
+            1388,
+            3516
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9938"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            390,
+            3691,
+            1100,
+            3785
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9999"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3005.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            360,
+            2582,
+            2724,
+            2873
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9933"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1517,
+            293,
+            2436,
+            548
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9930"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1519,
+            408,
+            2446,
+            630
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9732"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            360,
+            2582,
+            2724,
+            2873
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9933"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1519,
+            408,
+            2446,
+            630
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=21st Century Textbooks of General Education score=27.586206896551722 conf=0.9732"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            1517,
+            293,
+            2436,
+            548
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9930"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            329,
+            3576,
+            1106,
+            3719
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9996"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3006.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            370,
+            2488,
+            2740,
+            2960
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9965"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1332,
+            235,
+            2238,
+            571
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9959"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1332,
+            235,
+            2238,
+            571
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9959"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            370,
+            2488,
+            2740,
+            2960
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9965"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1332,
+            235,
+            2238,
+            571
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9959"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            557,
+            3255,
+            1470,
+            3473
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9950"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            424,
+            3621,
+            1204,
+            3822
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9998"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3007.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            343,
+            2503,
+            2715,
+            2915
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9942"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1675,
+            337,
+            2569,
+            541
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9948"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1668,
+            442,
+            2585,
+            629
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st CenturyTextboksofGeneralEducation score=56.790123456790134 conf=0.9396"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            343,
+            2503,
+            2715,
+            2915
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9942"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1668,
+            442,
+            2585,
+            629
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=21st CenturyTextboksofGeneralEducation score=31.707317073170728 conf=0.9396"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            1675,
+            337,
+            2569,
+            541
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9948"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            278,
+            3539,
+            1063,
+            3655
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=I中国人民大学出版社 score=94.73684210526316 conf=0.9466"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3008.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            315,
+            2652,
+            2756,
+            2993
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9968"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1646,
+            595,
+            2462,
+            833
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9956"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1646,
+            595,
+            2462,
+            833
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9956"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            315,
+            2652,
+            2756,
+            2993
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9968"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1646,
+            595,
+            2462,
+            833
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9956"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            385,
+            3376,
+            2059,
+            3559
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9963"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            171,
+            3771,
+            1032,
+            3877
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9963"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3009.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            439,
+            2579,
+            2734,
+            3079
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9950"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1525,
+            287,
+            2543,
+            687
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9963"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1525,
+            287,
+            2543,
+            687
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21世纪通识教育系列教材 score=7.272727272727275 conf=0.9963"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            439,
+            2579,
+            2734,
+            3079
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9950"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1525,
+            287,
+            2543,
+            687
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=21世纪通识教育系列教材 score=0.0 conf=0.9963"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            1525,
+            287,
+            2543,
+            687
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=21世纪通识教育系列教材 score=0.0 conf=0.9963"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            389,
+            3586,
+            1114,
+            3701
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9974"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3010.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            708,
+            2578,
+            2402,
+            2781
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9975"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1606,
+            1109,
+            2208,
+            1185
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9959"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1628,
+            1184,
+            2204,
+            1235
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9544"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            708,
+            2578,
+            2402,
+            2781
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9975"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            773,
+            2935,
+            2539,
+            3071
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9567"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            773,
+            3082,
+            1478,
+            3180
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9971"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            640,
+            3339,
+            1229,
+            3419
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9987"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3011.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            685,
+            2606,
+            2300,
+            2845
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9957"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1526,
+            1080,
+            2160,
+            1242
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9938"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1557,
+            1156,
+            2155,
+            1292
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21stCentury Textbooks of General Education score=98.82352941176471 conf=0.9398"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            685,
+            2606,
+            2300,
+            2845
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9957"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            689,
+            2929,
+            2438,
+            3174
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Artificial Intelligence and Machine Learning score=100.0 conf=0.9560"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            733,
+            3085,
+            1411,
+            3211
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9973"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            608,
+            3307,
+            1124,
+            3430
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=I中国人民大学出版社 score=94.73684210526316 conf=0.9445"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3012.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            421,
+            2146,
+            2556,
+            2373
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9956"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1576,
+            722,
+            2195,
+            794
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9972"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            489,
+            2566,
+            2762,
+            2697
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9598"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            421,
+            2146,
+            2556,
+            2373
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9956"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            489,
+            2566,
+            2762,
+            2697
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9598"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            472,
+            2751,
+            1353,
+            2844
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9951"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            261,
+            3061,
+            1036,
+            3168
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9950"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3013.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            520,
+            2433,
+            2521,
+            2867
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9940"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1559,
+            562,
+            2281,
+            769
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9934"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1620,
+            669,
+            2289,
+            839
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21CenturyTextbooksofGeneralduaon score=53.333333333333336 conf=0.8849"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            520,
+            2433,
+            2521,
+            2867
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9940"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            667,
+            2843,
+            2645,
+            3218
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9542"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            677,
+            3162,
+            1553,
+            3390
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9943"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            525,
+            3515,
+            1288,
+            3730
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9979"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3014.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            313,
+            676,
+            2058,
+            777
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9892"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1619,
+            945,
+            2444,
+            1042
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9929"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1611,
+            1062,
+            2449,
+            1130
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9735"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            592,
+            2809,
+            2415,
+            3029
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9957"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1611,
+            1062,
+            2449,
+            1130
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=21st Century Textbooks of General Education score=27.586206896551722 conf=0.9735"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            726,
+            3272,
+            1469,
+            3348
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9913"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            627,
+            3478,
+            1186,
+            3532
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9971"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3015.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            515,
+            2612,
+            2608,
+            2844
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9955"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1597,
+            659,
+            2363,
+            761
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9944"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1601,
+            751,
+            2368,
+            836
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9728"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            515,
+            2612,
+            2608,
+            2844
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9955"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            597,
+            3066,
+            2758,
+            3179
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Vrtificial Intelligence and Machine Learning score=75.0 conf=0.9665"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            614,
+            3242,
+            2040,
+            3335
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9923"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            472,
+            3553,
+            1168,
+            3625
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9939"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3016.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            798,
+            2595,
+            2312,
+            2790
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9955"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1545,
+            1255,
+            2110,
+            1349
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9933"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1576,
+            1327,
+            2093,
+            1391
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Educatio score=98.82352941176471 conf=0.9568"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            798,
+            2595,
+            2312,
+            2790
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9955"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            829,
+            2936,
+            2431,
+            3028
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=Nrtificial Intelligence and Machine Learning score=75.0 conf=0.9703"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            863,
+            3066,
+            1899,
+            3146
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9951"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            751,
+            3293,
+            1267,
+            3369
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9953"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3017.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            412,
+            2658,
+            2771,
+            2915
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9963"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1503,
+            478,
+            2483,
+            601
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9941"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1632,
+            592,
+            2492,
+            672
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9847"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            412,
+            2658,
+            2771,
+            2915
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9963"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            536,
+            3149,
+            2960,
+            3314
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9824"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            528,
+            3355,
+            1478,
+            3470
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9855"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            357,
+            3721,
+            1147,
+            3805
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9949"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3018.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            286,
+            2451,
+            2661,
+            2748
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9964"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1511,
+            704,
+            2243,
+            812
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9985"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1533,
+            806,
+            1865,
+            862
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=2lr cehtury texib66 score=38.70967741935484 conf=0.7177"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            286,
+            2451,
+            2661,
+            2748
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9964"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            373,
+            2965,
+            2904,
+            3129
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9828"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            357,
+            3213,
+            1340,
+            3301
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云 score=78.26086956521739 conf=0.9915"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            137,
+            3591,
+            979,
+            3675
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9971"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3019.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            431,
+            2433,
+            2542,
+            2750
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9974"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1496,
+            714,
+            2224,
+            916
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=1世纪通识教育系列教材 score=95.65217391304348 conf=0.9834"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1521,
+            782,
+            2220,
+            965
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9559"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            431,
+            2433,
+            2542,
+            2750
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9974"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            481,
+            2923,
+            2762,
+            3087
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9740"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            467,
+            3128,
+            1362,
+            3235
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云引 score=75.0 conf=0.9386"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            286,
+            3434,
+            964,
+            3559
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9987"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3020.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            389,
+            2518,
+            2764,
+            2841
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9962"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1612,
+            290,
+            2506,
+            534
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9945"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1614,
+            395,
+            2518,
+            617
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21stCenturyTextbooksofGeneralEducation score=54.32098765432099 conf=0.9472"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            389,
+            2518,
+            2764,
+            2841
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9962"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            1614,
+            395,
+            2518,
+            617
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=21stCenturyTextbooksofGeneralEducation score=29.268292682926834 conf=0.9472"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            1612,
+            290,
+            2506,
+            534
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=世纪通识教育系列教材 score=0.0 conf=0.9945"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            344,
+            3549,
+            1100,
+            3620
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9978"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3021.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            767,
+            2426,
+            2485,
+            2669
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9882"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1609,
+            748,
+            2326,
+            945
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9956"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1712,
+            863,
+            2313,
+            985
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Educatior score=97.67441860465115 conf=0.9513"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            767,
+            2426,
+            2485,
+            2669
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9882"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            866,
+            2770,
+            2609,
+            2984
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9694"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            865,
+            2946,
+            2068,
+            3123
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9911"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            732,
+            3270,
+            1368,
+            3400
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9923"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3022.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            498,
+            827,
+            1886,
+            929
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖 score=100.0 conf=0.9888"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1524,
+            1024,
+            2208,
+            1122
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=世纪通识教育系列教材 score=90.9090909090909 conf=0.9930"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1537,
+            1117,
+            2213,
+            1193
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21st Century Textbooks of General Education score=100.0 conf=0.9814"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            717,
+            2629,
+            2268,
+            2785
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9941"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            803,
+            2910,
+            2367,
+            3041
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9705"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            816,
+            3036,
+            1830,
+            3117
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云张静编著 score=96.2962962962963 conf=0.9917"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            726,
+            3229,
+            1220,
+            3297
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9918"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3023.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            1065,
+            1096,
+            1761,
+            1155
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能大数据区块链专业（方向）优秀教材二等奖 score=88.46153846153845 conf=0.9641"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1460,
+            1193,
+            1984,
+            1252
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9955"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            842,
+            2570,
+            2294,
+            2663
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=rtificial Intelligence and Machine Learning score=32.55813953488372 conf=0.9723"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            790,
+            2280,
+            2174,
+            2453
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9951"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            842,
+            2570,
+            2294,
+            2663
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9723"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            838,
+            2688,
+            1422,
+            2759
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月 覃雄派赵素云 score=75.0 conf=0.9511"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            708,
+            2893,
+            1207,
+            2961
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9998"
+        }
+      ]
+    },
+    {
+      "image_path": "images/IMG_3024.JPG",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [
+            438,
+            2469,
+            2131,
+            2684
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9% | ocr_match=人工智能与机器学习 score=21.052631578947366 conf=0.9949"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [
+            1260,
+            862,
+            1979,
+            1032
+          ],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6% | ocr_match=21世纪通识教育系列教材 score=100.0 conf=0.9698"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [
+            1350,
+            938,
+            1974,
+            1078
+          ],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3% | ocr_match=21stCenturyTextbooksofGeneral Educatio score=56.790123456790134 conf=0.9364"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [
+            438,
+            2469,
+            2131,
+            2684
+          ],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8% | ocr_match=人工智能与机器学习 score=100.0 conf=0.9949"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [
+            483,
+            2804,
+            2270,
+            3018
+          ],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6% | ocr_match=rtificial Intelligence and Machine Learning score=75.86206896551724 conf=0.9529"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [
+            488,
+            2968,
+            1208,
+            3084
+          ],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8% | ocr_match=王秋月覃雄派赵素云弓 score=75.0 conf=0.9540"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [
+            359,
+            3211,
+            908,
+            3320
+          ],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4% | ocr_match=中国人民大学出版社 score=100.0 conf=0.9991"
+        }
+      ]
+    }
+  ]
+}

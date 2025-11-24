@@ -1,0 +1,86 @@
+{
+  "version": "template-fonts-v1",
+  "export_date": "2025-11-24T00:00:00.000Z",
+  "total_images": 1,
+  "images": [
+    {
+      "image_path": "images/微信图片_20251117122144_242_510.jpg",
+      "image_width": 3024,
+      "image_height": 4032,
+      "book_size": "16k",
+      "book_width_cm": 18.5,
+      "annotations": [
+        {
+          "id": 0,
+          "text": "获得全国高校人工智能大数据区块链专业（方向）优秀教材二等奖",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度98.7%，字体可信度60.9%"
+        },
+        {
+          "id": 1,
+          "text": "21世纪通识教育系列教材",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "黑体",
+          "font_size_name": "八号",
+          "point_size": 5,
+          "confidence": "high",
+          "notes": "置信度99.3%，字体可信度54.6%"
+        },
+        {
+          "id": 2,
+          "text": "21st Century Textbooks of General Education",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "Helvetica",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度95.6%，字体可信度56.3%"
+        },
+        {
+          "id": 3,
+          "text": "人工智能与机器学习",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "宋体",
+          "font_size_name": "三号",
+          "point_size": 16,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度51.8%"
+        },
+        {
+          "id": 4,
+          "text": "Artificial Intelligence and Machine Learning",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "Times New Roman",
+          "font_size_name": "四号",
+          "point_size": 14,
+          "confidence": "high",
+          "notes": "置信度96.1%，字体可信度85.6%"
+        },
+        {
+          "id": 5,
+          "text": "王秋月覃雄派赵素云张静◎编著",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "华文细黑",
+          "font_size_name": "小四",
+          "point_size": 12,
+          "confidence": "high",
+          "notes": "置信度99.6%，字体可信度53.8%"
+        },
+        {
+          "id": 6,
+          "text": "中国人民大学出版社",
+          "bbox": [0, 0, 0, 0],
+          "font_family": "黑体",
+          "font_size_name": "小五",
+          "point_size": 9,
+          "confidence": "high",
+          "notes": "置信度100.0%，字体可信度54.4%"
+        }
+      ]
+    }
+  ]
+}
