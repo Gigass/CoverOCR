@@ -23,7 +23,8 @@ if not exist "%VENV_DIR%" (
 call "%VENV_DIR%\Scripts\activate.bat"
 
 :: 2. Backend Deps
-if not exist "%VENV_DIR%\.deps_installed" (
+:: Changed marker to v2 to force re-install for users with broken v1 installs
+if not exist "%VENV_DIR%\.deps_installed_v2" (
     echo [setup] Installing backend dependencies...
     
     :: Configure pip to use Aliyun mirror to fix SSL/Connection issues
@@ -33,7 +34,14 @@ if not exist "%VENV_DIR%\.deps_installed" (
     python -m pip install --upgrade pip setuptools wheel
     
     pip install -r "%ROOT_DIR%backend\requirements.txt"
-    type nul > "%VENV_DIR%\.deps_installed"
+    
+    if %errorlevel% neq 0 (
+        echo [error] Dependency installation failed!
+        pause
+        exit /b %errorlevel%
+    )
+    
+    type nul > "%VENV_DIR%\.deps_installed_v2"
 )
 
 :: 3. Frontend Deps
