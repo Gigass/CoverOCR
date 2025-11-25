@@ -82,12 +82,26 @@ function App() {
     pollingRef.current = window.setInterval(fetchResult, 1500)
   }, [messageApi])
 
+  const [bookSize, setBookSize] = useState<string>('16k')
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null)
+
   useEffect(() => () => clearPolling(), [])
 
-  const [bookSize, setBookSize] = useState<string>('16k')
+  // Cleanup preview URL on unmount or change
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl)
+      }
+    }
+  }, [previewUrl])
 
   const handleUpload = async (options: UploadRequestOption) => {
     const file = options.file as File
+    // Create preview URL
+    const objectUrl = URL.createObjectURL(file)
+    setPreviewUrl(objectUrl)
+
     setStatus('uploading')
     setError(null)
     setResult(null)
@@ -205,11 +219,32 @@ function App() {
               />
             </div>
             <Upload.Dragger {...uploadProps} disabled={status === 'uploading'}>
-              <p className="upload-icon">
-                <InboxOutlined />
-              </p>
-              <p className="upload-text">点击或拖拽 JPG / PNG 图片到此处</p>
-              <p className="upload-hint">建议使用实拍封面，大小不超过 20MB</p>
+              {previewUrl ? (
+                <div style={{ padding: '20px 0' }}>
+                  <img
+                    src={previewUrl}
+                    alt="Cover Preview"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '300px',
+                      objectFit: 'contain',
+                      borderRadius: '8px',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                    }}
+                  />
+                  <p className="upload-text" style={{ marginTop: 10 }}>
+                    点击更换图片
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <p className="upload-icon">
+                    <InboxOutlined />
+                  </p>
+                  <p className="upload-text">点击或拖拽 JPG / PNG 图片到此处</p>
+                  <p className="upload-hint">建议使用实拍封面，大小不超过 20MB</p>
+                </>
+              )}
             </Upload.Dragger>
             <Space className="status-row">
               <Text>流程状态</Text>
