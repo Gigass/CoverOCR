@@ -67,18 +67,7 @@ npm install
 npm run dev
 ```
 
-### 方式三：Docker Compose
 
-```bash
-cd infra
-cp .env.example .env
-docker compose up --build
-```
-
-访问地址：
-- 前端：http://localhost:5173
-- 后端 API：http://localhost:8000/api/v1
-- MinIO 控制台：http://localhost:9001
 
 ## 使用指南
 
