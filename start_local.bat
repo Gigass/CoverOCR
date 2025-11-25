@@ -7,6 +7,14 @@ set "VENV_DIR=%ROOT_DIR%.venv"
 echo [setup] Checking environment...
 
 :: 1. Python Venv
+:: Check if venv exists but is invalid (e.g. created by WSL/Linux)
+if exist "%VENV_DIR%" (
+    if not exist "%VENV_DIR%\Scripts\activate.bat" (
+        echo [setup] Detected invalid or Linux-style virtual environment. Cleaning up...
+        rmdir /s /q "%VENV_DIR%"
+    )
+)
+
 if not exist "%VENV_DIR%" (
     echo [setup] Creating Python virtual environment...
     python -m venv "%VENV_DIR%"
