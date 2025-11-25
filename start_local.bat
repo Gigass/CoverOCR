@@ -25,7 +25,13 @@ call "%VENV_DIR%\Scripts\activate.bat"
 :: 2. Backend Deps
 if not exist "%VENV_DIR%\.deps_installed" (
     echo [setup] Installing backend dependencies...
-    pip install --upgrade pip
+    
+    :: Configure pip to use Aliyun mirror to fix SSL/Connection issues
+    pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+    
+    :: Upgrade essential build tools first
+    python -m pip install --upgrade pip setuptools wheel
+    
     pip install -r "%ROOT_DIR%backend\requirements.txt"
     type nul > "%VENV_DIR%\.deps_installed"
 )
