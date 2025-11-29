@@ -26,14 +26,29 @@ for /f "tokens=1,2 delims=." %%a in ("%PYTHON_VERSION%") do (
     set PYTHON_MINOR=%%b
 )
 
-:: Warn if Python 3.13+
+:: Block Python 3.13+ due to incompatibility
 if %PYTHON_MAJOR% GEQ 3 if %PYTHON_MINOR% GEQ 13 (
     echo.
-    echo [WARNING] You are using Python %PYTHON_VERSION%
-    echo [WARNING] For best compatibility, Python 3.10-3.12 is recommended.
-    echo [WARNING] Python 3.13+ may have dependency compatibility issues.
+    echo ========================================================================
+    echo [ERROR] Python %PYTHON_VERSION% is NOT supported!
+    echo ========================================================================
     echo.
-    timeout /t 3 >nul
+    echo This project requires Python 3.10, 3.11, or 3.12.
+    echo.
+    echo WHY: PaddlePaddle 3.1.1 requires numpy ^<2.0, but Python 3.13
+    echo      only has numpy 2.x wheels available. This creates an
+    echo      unsolvable dependency conflict.
+    echo.
+    echo SOLUTION: Please install Python 3.12 from:
+    echo           https://www.python.org/downloads/
+    echo.
+    echo After installing Python 3.12:
+    echo   1. Delete the .venv folder in this directory
+    echo   2. Run this script again
+    echo.
+    echo ========================================================================
+    pause
+    exit /b 1
 )
 
 if not exist "%VENV_DIR%" (
