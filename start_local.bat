@@ -76,7 +76,7 @@ if not exist "%ROOT_DIR%frontend\node_modules" (
 :: 4. Start Services
 echo [start] Starting FastAPI Backend...
 :: Start in a new window, activate venv, and run uvicorn
-start "CoverOCR Backend" cmd /k "call \"%VENV_DIR%\Scripts\activate.bat\" && cd /d \"%ROOT_DIR%\" && uvicorn backend.app.main:app --reload --reload-dir backend --host 0.0.0.0 --port 8000"
+start "CoverOCR Backend" cmd /k "call ^"%VENV_DIR%\Scripts\activate.bat^" && cd /d ^"%ROOT_DIR%^" && uvicorn backend.app.main:app --reload --reload-dir backend --host 0.0.0.0 --port 8000"
 
 echo [start] Starting Vite Frontend...
 cd "%ROOT_DIR%frontend"
