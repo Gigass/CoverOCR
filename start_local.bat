@@ -44,8 +44,8 @@ if not exist "%VENV_DIR%" (
 call "%VENV_DIR%\Scripts\activate.bat"
 
 :: 2. Backend Deps
-:: Changed marker to v2 to force re-install for users with broken v1 installs
-if not exist "%VENV_DIR%\.deps_installed_v2" (
+:: Changed marker to v3 to force re-install with new numpy version
+if not exist "%VENV_DIR%\.deps_installed_v3" (
     echo [setup] Installing backend dependencies...
     
     :: Configure pip to use Aliyun mirror to fix SSL/Connection issues
@@ -62,7 +62,7 @@ if not exist "%VENV_DIR%\.deps_installed_v2" (
         exit /b %errorlevel%
     )
     
-    type nul > "%VENV_DIR%\.deps_installed_v2"
+    type nul > "%VENV_DIR%\.deps_installed_v3"
 )
 
 :: 3. Frontend Deps
