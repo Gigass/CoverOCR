@@ -15,6 +15,27 @@ if exist "%VENV_DIR%" (
     )
 )
 
+:: Check Python version
+echo [setup] Checking Python version...
+for /f "tokens=2 delims= " %%i in ('python --version 2^>^&1') do set PYTHON_VERSION=%%i
+echo [setup] Detected Python %PYTHON_VERSION%
+
+:: Extract major and minor version
+for /f "tokens=1,2 delims=." %%a in ("%PYTHON_VERSION%") do (
+    set PYTHON_MAJOR=%%a
+    set PYTHON_MINOR=%%b
+)
+
+:: Warn if Python 3.13+
+if %PYTHON_MAJOR% GEQ 3 if %PYTHON_MINOR% GEQ 13 (
+    echo.
+    echo [WARNING] You are using Python %PYTHON_VERSION%
+    echo [WARNING] For best compatibility, Python 3.10-3.12 is recommended.
+    echo [WARNING] Python 3.13+ may have dependency compatibility issues.
+    echo.
+    timeout /t 3 >nul
+)
+
 if not exist "%VENV_DIR%" (
     echo [setup] Creating Python virtual environment...
     python -m venv "%VENV_DIR%"
