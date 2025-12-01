@@ -7,6 +7,9 @@ set "FRONT_DIR=%ROOT_DIR%frontend"
 set "BACK_REQ=%ROOT_DIR%backend\requirements.txt"
 set "BACK_MARK=%VENV_DIR%\.deps_installed_v3"
 set "FRONT_MARK=%FRONT_DIR%\.deps_installed_v1"
+set "BACK_PORT=8000"
+set "FRONT_PORT=5173"
+set "FRONT_CMD=call npm run dev -- --host --port %FRONT_PORT% || pause"
 
 echo [setup] Checking environment...
 
@@ -41,6 +44,13 @@ if not exist "%VENV_DIR%\Scripts\activate.bat" (
 
 call "%VENV_DIR%\Scripts\activate.bat"
 
+:: Make sure no old dev servers are still bound to our ports
+echo [setup] Checking for stale dev servers...
+powershell -NoLogo -NoProfile -Command ^
+  "$ports = %BACK_PORT%,%FRONT_PORT%;" ^
+  "$busy = Get-NetTCPConnection -LocalPort $ports -ErrorAction SilentlyContinue | Select-Object -Expand OwningProcess -Unique | Where-Object { $_ -gt 0 };" ^
+  "if(-not $busy){ Write-Host '[setup] Ports are free.'; } else { Write-Host '[setup] Ports busy, stopping lingering processes...'; foreach($pid in $busy){ try { Stop-Process -Id $pid -Force -ErrorAction Stop; Write-Host ('  Killed PID ' + $pid) } catch { Write-Host ('  Could not kill PID ' + $pid + ': ' + $_) } } }"
+
 :: Backend dependencies
 if not exist "%BACK_MARK%" (
     echo [setup] Installing backend dependencies...
@@ -71,16 +81,16 @@ if not exist "%FRONT_MARK%" (
 )
 
 :: Start services
-echo [start] Starting FastAPI Backend...
-start "CoverOCR Backend" cmd /k "call ^"%VENV_DIR%\Scripts\activate.bat^" && cd /d ^"%ROOT_DIR%^" && uvicorn backend.app.main:app --reload --reload-dir backend --host 0.0.0.0 --port 8000"
+echo [start] Starting FastAPI Backend (http://localhost:%BACK_PORT%/docs)...
+start "CoverOCR Backend" cmd /k "call ^"%VENV_DIR%\Scripts\activate.bat^" && cd /d ^"%ROOT_DIR%^" && uvicorn backend.app.main:app --reload --reload-dir backend --host 0.0.0.0 --port %BACK_PORT%"
 
-echo [start] Starting Vite Frontend...
-start "CoverOCR Frontend" cmd /k "cd /d ^"%FRONT_DIR%^" && npm run dev -- --host"
+echo [start] Starting Vite Frontend (http://localhost:%FRONT_PORT%)...
+start "CoverOCR Frontend" cmd /k "cd /d ^"%FRONT_DIR%^" && %FRONT_CMD%"
 
 echo.
 echo [ready] Services are launching in new windows.
-echo         Backend:  http://localhost:8000/docs
-echo         Frontend: http://localhost:5173
+echo         Backend:  http://localhost:%BACK_PORT%/docs
+echo         Frontend: http://localhost:%FRONT_PORT%
 echo.
 echo To stop services, close the new windows or run stop_local.bat
 pause
