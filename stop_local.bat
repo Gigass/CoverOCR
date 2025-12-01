@@ -1,25 +1,23 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
+
+set "ROOT_DIR=%~dp0"
+set "VENV_DIR=%ROOT_DIR%.venv"
 
 echo [shutdown] Stopping services...
 
-:: Kill process on port 8000 (Backend)
-set "FOUND_8000=0"
-for /f "tokens=5" %%a in ('netstat -aon ^| find ":8000" ^| find "LISTENING" 2^>nul') do (
-    echo [shutdown] Killing process on port 8000 (PID: %%a)...
-    taskkill /f /pid %%a >nul 2>&1
-    set "FOUND_8000=1"
-)
-if !FOUND_8000!==0 echo [shutdown] No process found on port 8000
+:: Kill processes bound to backend/frontend ports and any CoverOCR python/node tasks
+powershell -NoLogo -NoProfile -Command ^
+  "$ports = 8000,5173;" ^
+  "$pids = @();" ^
+  "foreach($p in $ports){$pids += Get-NetTCPConnection -LocalPort $p -ErrorAction SilentlyContinue | Select-Object -Expand OwningProcess -Unique};" ^
+  "$procs = Get-Process python,pythonw,uvicorn,node,npm -ErrorAction SilentlyContinue | Where-Object { $_.Path -and $_.Path -like '*CoverOCR*' };" ^
+  "$ids = ($pids + $procs.Id) | Sort-Object -Unique | Where-Object { $_ -gt 0 };" ^
+  "if(-not $ids){ Write-Host '[shutdown] No matching processes found'; } else { $ids | ForEach-Object { Write-Host \"[shutdown] Killing PID $_\"; Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue } }"
 
-:: Kill process on port 5173 (Frontend)
-set "FOUND_5173=0"
-for /f "tokens=5" %%a in ('netstat -aon ^| find ":5173" ^| find "LISTENING" 2^>nul') do (
-    echo [shutdown] Killing process on port 5173 (PID: %%a)...
-    taskkill /f /pid %%a >nul 2>&1
-    set "FOUND_5173=1"
-)
-if !FOUND_5173!==0 echo [shutdown] No process found on port 5173
+:: Also close windows started by start_local
+taskkill /f /fi "WINDOWTITLE eq CoverOCR Backend" >nul 2>&1
+taskkill /f /fi "WINDOWTITLE eq CoverOCR Frontend" >nul 2>&1
 
 echo.
 echo [shutdown] Done.

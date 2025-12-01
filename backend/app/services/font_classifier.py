@@ -16,7 +16,13 @@ import paddle.nn as nn
 import paddle.vision.transforms as T
 from paddle.vision.models import resnet18
 from paddle.inference import Config, create_predictor
-from paddleclas.paddleclas import check_model_file
+
+# paddleclas is optional; fall back to heuristic classifier if unavailable
+try:
+    from paddleclas.paddleclas import check_model_file
+    _PADDLECLAS_AVAILABLE = True
+except Exception:  # noqa: BLE001
+    _PADDLECLAS_AVAILABLE = False
 
 MODEL_NAME = "PPLCNetV2_base"
 FONT_BASE_DIR = Path("models/fonts")
@@ -76,6 +82,8 @@ class PaddleClasFeatureExtractor:
     """Minimal paddle inference runner that outputs normalized logits."""
 
     def __init__(self, model_name: str = MODEL_NAME) -> None:
+        if not _PADDLECLAS_AVAILABLE:
+            raise ImportError("paddleclas is not installed; advanced font classifier disabled")
         model_dir = Path(check_model_file("imn", model_name))
         model_file = model_dir / "inference.pdmodel"
         params_file = model_dir / "inference.pdiparams"
@@ -372,4 +380,46 @@ class FontClassifier:
             result = self._advanced.predict(text, crop)
             if result:
                 return result
+        return self._fallback.predict(text, crop)
+
+
+# Override with a simplified FontClassifier that works without paddleclas on Python 3.12+
+class FontClassifier:  # type: ignore[redef]
+    """Tries custom model, then optional PaddleClas, then heuristics."""
+
+    def __init__(self) -> None:
+        self._custom: Optional[CustomResNetFontClassifier] = None
+        self._advanced: Optional[PaddleClasFeatureExtractor] = None
+
+        # Try loading custom fine-tuned model
+        try:
+            custom_model_dir = Path("models/custom_font_classifier")
+            if custom_model_dir.exists():
+                self._custom = CustomResNetFontClassifier(custom_model_dir)
+                print("[FontClassifier] Loaded fine-tuned ResNet18 model")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[FontClassifier] Failed to load fine-tuned model: {exc}")
+
+        # Optional PaddleClas path
+        if not self._custom and _PADDLECLAS_AVAILABLE:
+            try:
+                self._advanced = PaddleClasFontClassifier()
+            except Exception as exc:  # noqa: BLE001
+                print(f"[FontClassifier] PaddleClas init failed, using heuristics: {exc}")
+        elif not _PADDLECLAS_AVAILABLE:
+            print("[FontClassifier] paddleclas not available; using heuristics.")
+
+        self._fallback = HeuristicFontClassifier()
+
+    def predict(self, text: str, crop: Optional[np.ndarray]) -> Tuple[str, float]:
+        if self._custom:
+            result = self._custom.predict(text, crop)
+            if result:
+                return result
+
+        if self._advanced:
+            result = self._advanced.predict(text, crop)
+            if result:
+                return result
+
         return self._fallback.predict(text, crop)
